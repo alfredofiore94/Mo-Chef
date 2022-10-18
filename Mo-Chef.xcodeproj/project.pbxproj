@@ -16,6 +16,11 @@
 		9F30907328FEB4150027F12B /* CercaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907228FEB4140027F12B /* CercaView.swift */; };
 		9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907428FEB42D0027F12B /* ListaSpesaView.swift */; };
 		9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907628FEE0910027F12B /* CustomTabBarItems.swift */; };
+		9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907928FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift */; };
+		9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907A28FEEEFB0027F12B /* CustomNavView.swift */; };
+		9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */; };
+		9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */; };
+		9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
@@ -32,6 +37,11 @@
 		9F30907228FEB4140027F12B /* CercaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaView.swift; sourceTree = "<group>"; };
 		9F30907428FEB42D0027F12B /* ListaSpesaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSpesaView.swift; sourceTree = "<group>"; };
 		9F30907628FEE0910027F12B /* CustomTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItems.swift; sourceTree = "<group>"; };
+		9F30907928FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
+		9F30907A28FEEEFB0027F12B /* CustomNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
+		9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F81788728FE9471002296BC /* Mo_ChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mo_ChefApp.swift; sourceTree = "<group>"; };
 		9F81788928FE9471002296BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +64,7 @@
 		9F30905828FE9AC70027F12B /* menu */ = {
 			isa = PBXGroup;
 			children = (
+				9F30907828FEEEC70027F12B /* customNavBar */,
 				9F30905928FE9AE30027F12B /* customTabBar */,
 			);
 			path = menu;
@@ -123,6 +134,18 @@
 				9F30907428FEB42D0027F12B /* ListaSpesaView.swift */,
 			);
 			path = ListaSpesa;
+			sourceTree = "<group>";
+		};
+		9F30907828FEEEC70027F12B /* customNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */,
+				9F30907928FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift */,
+				9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */,
+				9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */,
+				9F30907A28FEEEFB0027F12B /* CustomNavView.swift */,
+			);
+			path = customNavBar;
 			sourceTree = "<group>";
 		};
 		9F81787B28FE9471002296BC = {
@@ -232,6 +255,7 @@
 			files = (
 				9F81788A28FE9471002296BC /* ContentView.swift in Sources */,
 				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
+				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,
@@ -239,6 +263,10 @@
 				9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */,
 				9F30906F28FEB3D90027F12B /* BilanciaView.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
+				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
+				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
+				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,
+				9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
 				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,
 			);

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */; };
+		9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906128FE9BE10027F12B /* CustomTabBar.swift */; };
+		9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		9F30906128FE9BE10027F12B /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainer.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F81788728FE9471002296BC /* Mo_ChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mo_ChefApp.swift; sourceTree = "<group>"; };
 		9F81788928FE9471002296BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +39,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F30905828FE9AC70027F12B /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				9F30905928FE9AE30027F12B /* customTabBar */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		9F30905928FE9AE30027F12B /* customTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9F30906128FE9BE10027F12B /* CustomTabBar.swift */,
+				9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */,
+				9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */,
+			);
+			path = customTabBar;
+			sourceTree = "<group>";
+		};
 		9F81787B28FE9471002296BC = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +78,7 @@
 			children = (
 				9F81788728FE9471002296BC /* Mo_ChefApp.swift */,
 				9F81788928FE9471002296BC /* ContentView.swift */,
+				9F30905828FE9AC70027F12B /* menu */,
 				9F81788B28FE9472002296BC /* Assets.xcassets */,
 				9F81788D28FE9472002296BC /* Mo_Chef.entitlements */,
 				9F81788E28FE9472002296BC /* Preview Content */,
@@ -140,6 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F81788A28FE9471002296BC /* ContentView.swift in Sources */,
+				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
+				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
+				9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

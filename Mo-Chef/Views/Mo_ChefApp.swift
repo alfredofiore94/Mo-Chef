@@ -20,7 +20,7 @@ struct Mo_ChefApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().ignoresSafeArea()
         }
     }
 }

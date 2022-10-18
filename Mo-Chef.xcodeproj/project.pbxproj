@@ -15,6 +15,7 @@
 		9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907028FEB3FB0027F12B /* CategorieView.swift */; };
 		9F30907328FEB4150027F12B /* CercaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907228FEB4140027F12B /* CercaView.swift */; };
 		9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907428FEB42D0027F12B /* ListaSpesaView.swift */; };
+		9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907628FEE0910027F12B /* CustomTabBarItems.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		9F30907028FEB3FB0027F12B /* CategorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieView.swift; sourceTree = "<group>"; };
 		9F30907228FEB4140027F12B /* CercaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaView.swift; sourceTree = "<group>"; };
 		9F30907428FEB42D0027F12B /* ListaSpesaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSpesaView.swift; sourceTree = "<group>"; };
+		9F30907628FEE0910027F12B /* CustomTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItems.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F81788728FE9471002296BC /* Mo_ChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mo_ChefApp.swift; sourceTree = "<group>"; };
 		9F81788928FE9471002296BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				9F30906128FE9BE10027F12B /* CustomTabBar.swift */,
 				9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */,
 				9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */,
+				9F30907628FEE0910027F12B /* CustomTabBarItems.swift */,
 			);
 			path = customTabBar;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9F30906F28FEB3D90027F12B /* BilanciaView.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
+				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

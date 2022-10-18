@@ -67,15 +67,6 @@ extension CustomTabBar {
     
 }
 
-struct CustomTabBarItem: Hashable{
-    
-    let nomeIcona: String
-    let titolo: String
-    let colore: Color
-    let coloreSfondo: Color
-    let font: Font
-}
-
 struct CustomMainTabBar_Previews: PreviewProvider {
     
     /*
@@ -84,11 +75,7 @@ struct CustomMainTabBar_Previews: PreviewProvider {
      */
     
     static let tabs: [CustomTabBarItem] = [
-        CustomTabBarItem(nomeIcona: "bilancia_img", titolo: "Bilancia", colore: Color.white, coloreSfondo: Color.white.opacity(0), font: Mo_ChefApp.fontTabBar),
-        CustomTabBarItem(nomeIcona: "categorie_img", titolo: "Categorie", colore: Color.white, coloreSfondo: Color.white.opacity(0), font: Mo_ChefApp.fontTabBar),
-        CustomTabBarItem(nomeIcona: "home_img", titolo: "Home", colore: Color.white,  coloreSfondo: Color.white.opacity(0), font: Mo_ChefApp.fontTabBar),
-        CustomTabBarItem(nomeIcona: "cerca_img", titolo: "Cerca", colore: Color.white,  coloreSfondo: Color.clear, font: Mo_ChefApp.fontTabBar),
-        CustomTabBarItem(nomeIcona: "lista_img", titolo: "Cerca", colore: Color.white,  coloreSfondo: Color.clear, font: Mo_ChefApp.fontTabBar)
+        .bilancia, .categorie, .home, .cerca, .listaSpesa
     ]
     
     
@@ -97,7 +84,7 @@ struct CustomMainTabBar_Previews: PreviewProvider {
             Spacer()
             CustomTabBar(listaTabs: tabs,tabSelezionato: .constant(tabs[2]) , coloreSfondo: Color(red: 227 / 255, green: 124 / 255, blue: 81 / 255), coloreSelezione: Mo_ChefApp.verdeSelezione)
         }
-        
+            
     }
 }
 

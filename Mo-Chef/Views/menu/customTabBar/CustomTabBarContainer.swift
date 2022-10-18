@@ -29,7 +29,6 @@ struct CustomTabBarContainer<Content:View>: View {
             ZStack{
                 contenuto
             }
-            
             CustomTabBar(listaTabs: tabs, tabSelezionato: $tabSelezionato, coloreSfondo: coloreSfondo, coloreSelezione: coloreSelezione)
 
         }

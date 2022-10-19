@@ -26,6 +26,10 @@ struct CustomNavBarContainerView <Content: View> : View {
     @State var showBackBtn: Bool? = true
     @State var showNextBtn: Bool? = false
     
+    //button edit e menu
+    @State var buttonEdit: ButtonEdit? = nil
+    @State var buttonMenu: ButtonMenu? = nil
+    
     init(@ViewBuilder contenuto: () -> Content){
         
         self.contenuto = contenuto()
@@ -34,7 +38,7 @@ struct CustomNavBarContainerView <Content: View> : View {
     
     var body: some View {
         VStack(spacing: 0){
-            CustomNavBarView(titolo: titolo, coloreSfondo: coloreSfondo, coloreTesti: coloreTesti, coloreTitolo: coloreTitolo, sottotitolo: sottotitolo, coloreSottotitolo: coloreSottotitolo, coloreBackButton: coloreBackButton, showBackBtn: showBackBtn, showNextBtn: showNextBtn)
+            CustomNavBarView(titolo: titolo, coloreSfondo: coloreSfondo, coloreTesti: coloreTesti, coloreTitolo: coloreTitolo, sottotitolo: sottotitolo, coloreSottotitolo: coloreSottotitolo, coloreBackButton: coloreBackButton, showBackBtn: showBackBtn, showNextBtn: showNextBtn, buttonEdit: buttonEdit, buttonMenu: buttonMenu)
             contenuto
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -70,9 +74,20 @@ struct CustomNavBarContainerView <Content: View> : View {
             value in
             self.showBackBtn = value
         })
+        /*
         .onPreferenceChange(CustomNavBarShowNextButtonPreferenceKey.self ,perform: {
             value in
             self.showNextBtn = value
+        })
+         */
+        
+        .onPreferenceChange(CustomNavBarEditButtonPreferenceKey.self ,perform: {
+            value in
+            self.buttonEdit = value
+        })
+        .onPreferenceChange(CustomNavBarMenuButtonPreferenceKey.self ,perform: {
+            value in
+            self.buttonMenu = value
         })
     }
 }

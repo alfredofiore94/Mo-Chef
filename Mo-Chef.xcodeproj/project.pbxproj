@@ -25,6 +25,8 @@
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
 		9F81789028FE9472002296BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788F28FE9472002296BC /* Preview Assets.xcassets */; };
+		9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */; };
+		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		9F81788B28FE9472002296BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F81788D28FE9472002296BC /* Mo_Chef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mo_Chef.entitlements; sourceTree = "<group>"; };
 		9F81788F28FE9472002296BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		9F30905828FE9AC70027F12B /* menu */ = {
 			isa = PBXGroup;
 			children = (
+				9FCAC2E429004EBA00CFA084 /* MenuView.swift */,
 				9F30907828FEEEC70027F12B /* customNavBar */,
 				9F30905928FE9AE30027F12B /* customTabBar */,
 			);
@@ -144,6 +149,7 @@
 				9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */,
 				9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */,
 				9F30907A28FEEEFB0027F12B /* CustomNavView.swift */,
+				9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */,
 			);
 			path = customNavBar;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
+				9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,
 				9F30907328FEB4150027F12B /* CercaView.swift in Sources */,
 				9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */,
@@ -265,6 +272,7 @@
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
+				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
 				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,
 				9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,

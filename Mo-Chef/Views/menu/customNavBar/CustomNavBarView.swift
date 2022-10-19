@@ -23,18 +23,29 @@ struct CustomNavBarView: View {
     let showBackBtn: Bool?
     let showNextBtn: Bool?
     
+    let buttonEdit: ButtonEdit?
+    let buttonMenu: ButtonMenu?
+
     
     var body: some View {
         HStack{
             if showBackBtn != nil && showBackBtn == true {
                 backButton
             }
+            else if buttonMenu != nil {
+                buttonMenu
+            }
             Spacer()
             textTitles
             
             Spacer()
+            /*
             if showNextBtn != nil && showNextBtn == true {
                 nextButton
+            }
+            */
+            if buttonEdit != nil {
+                buttonEdit
             }
         }
         .padding()
@@ -86,10 +97,12 @@ extension CustomNavBarView {
     }
 }
 
+
+
 struct CustomNavBarView_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .gray, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: nil, showNextBtn: nil)
+            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .gray, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: nil, showNextBtn: nil, buttonEdit: nil, buttonMenu: nil)
             Spacer()
         }
     }

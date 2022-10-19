@@ -84,12 +84,32 @@ struct CustomNavBarShowBackButtonPreferenceKey: PreferenceKey{
         value = nextValue()
     }
 }
+/*
 // MOSTRA NEXT BUTTON
 struct CustomNavBarShowNextButtonPreferenceKey: PreferenceKey{
     
     static var defaultValue: Bool = false
     
     static func reduce(value: inout Bool, nextValue: () -> Bool) {
+        value = nextValue()
+    }
+}
+*/
+//EDIT BUTTON
+struct CustomNavBarEditButtonPreferenceKey: PreferenceKey{
+    
+    static var defaultValue: ButtonEdit? = nil
+    
+    static func reduce(value: inout ButtonEdit?, nextValue: () -> ButtonEdit?) {
+        value = nextValue()
+    }
+}
+//MENU BUTTON
+struct CustomNavBarMenuButtonPreferenceKey: PreferenceKey{
+    
+    static var defaultValue: ButtonMenu? = nil
+    
+    static func reduce(value: inout ButtonMenu?, nextValue: () -> ButtonMenu?) {
         value = nextValue()
     }
 }
@@ -129,11 +149,19 @@ extension View {
         preference(key: CustomNavBarShowBackButtonPreferenceKey.self, value: showBackButton)
     }
     // NEXT BUTTON VISIBLE
+    /*
     func customNavigationShowNextButton(_ showNextButton: Bool) -> some View{
         preference(key: CustomNavBarShowNextButtonPreferenceKey.self, value: showNextButton)
     }
+    */
+    func customNavigationEditButton(_ editButton: ButtonEdit?) -> some View{
+        preference(key: CustomNavBarEditButtonPreferenceKey.self, value: editButton)
+    }
+    func customNavigationMenuButton(_ menuButton: ButtonMenu?) -> some View{
+        preference(key: CustomNavBarMenuButtonPreferenceKey.self, value: menuButton)
+    }
     
-    func customNavBarItems(titolo: Text, coloreSfondo: Color, coloreTesti: Color, coloreTitolo: Color?, sottotitolo: String? , coloreSottotitolo: Color? , coloreBackButton: Color? , shoBackButton: Bool , showNextButton: Bool) -> some View{
+    func customNavBarItems(titolo: Text, coloreSfondo: Color, coloreTesti: Color, coloreTitolo: Color?, sottotitolo: String? , coloreSottotitolo: Color? , coloreBackButton: Color? , shoBackButton: Bool , editButton: ButtonEdit? , menuButton: ButtonMenu?) -> some View{
         self
             .customNavigationTitolo(titolo)
             .customNavigationColoreSfondo(coloreSfondo)
@@ -142,6 +170,8 @@ extension View {
             .customNavigationSottotitolo(sottotitolo)
             .customNavigationColoreSottotitolo(coloreSottotitolo)
             .customNavigationShowBackButton(shoBackButton)
-            .customNavigationShowNextButton(showNextButton)
+            //.customNavigationShowNextButton(showNextButton)
+            .customNavigationEditButton(editButton)
+            .customNavigationMenuButton(menuButton)
     }
 }

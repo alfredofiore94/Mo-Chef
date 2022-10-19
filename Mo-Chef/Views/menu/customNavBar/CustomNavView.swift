@@ -30,6 +30,9 @@ struct CustomNavView <Content:View> : View {
 }
 
 struct CustomNavView_Previews: PreviewProvider {
+    
+    let buttonE: ButtonEdit = ButtonEdit()
+    
     static var previews: some View {
         CustomNavView(){
             ZStack{
@@ -37,7 +40,7 @@ struct CustomNavView_Previews: PreviewProvider {
                 
                 CustomNavLink(destinazione: Text("me ne sono andato")
                     .customNavigationTitolo(Text("ora siam qua"))
-
+                    .customNavigationEditButton(ButtonEdit())
                 ){
                     Text("vai la")
                 }
@@ -45,6 +48,9 @@ struct CustomNavView_Previews: PreviewProvider {
             .customNavigationTitolo(Text("Eccoci qua").foregroundColor(.green))
             .customNavigationShowBackButton(false)
             .customNavigationColoreTitolo(.red)
+            .customNavigationColoreSfondo(.white)
+            
+            .customNavigationMenuButton(ButtonMenu())
         }
     }
 }

@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct MenuView: View {
+    
+    @StateObject var menuModel: MenuModel
+    
     var body: some View {
-        Text("Menù page")
+        CustomNavView(){
+            ZStack{
+                Color.white.ignoresSafeArea()
+                
+                CustomNavLink(destinazione: Text("me ne sono andato")
+                    .customNavigationTitolo(Text("ora siam qua"))
+                    .customNavigationEditButton(ButtonEdit())
+                ){
+                    Text("vai la")
+                }
+            }
+            .customNavigationTitolo(Text("menù").foregroundColor(.white))
+            .customNavigationShowBackButton(false)
+            .customNavigationColoreTitolo(.red)
+            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, nomeMenu: "X"))
+        }
+
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
+
     static var previews: some View {
-        MenuView()
+        let menuModel =  MenuModel()
+
+        MenuView(menuModel: menuModel)
     }
 }

@@ -50,7 +50,6 @@ struct CustomNavView_Previews: PreviewProvider {
             .customNavigationColoreTitolo(.red)
             .customNavigationColoreSfondo(.white)
             
-            .customNavigationMenuButton(ButtonMenu())
         }
     }
 }

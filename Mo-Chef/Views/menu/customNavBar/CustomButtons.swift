@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct ButtonEdit: View, Equatable {
+    
+    
     var body: some View {
         
         return Button("edit"){
@@ -18,17 +20,28 @@ struct ButtonEdit: View, Equatable {
 }
 
 struct ButtonMenu: View, Equatable {
+    @ObservedObject var menuModel: MenuModel
+    let nomeMenu: String
+
+    static func == (lhs: ButtonMenu, rhs: ButtonMenu) -> Bool {
+        return lhs.menuModel.isOpenMenu == rhs.menuModel.isOpenMenu
+    }
+    
     var body: some View {
         return 
-            CustomNavLink(destinazione: MenuView()
-                .customNavigationColoreSfondo(.clear)
-                .customNavigationShowBackButton(false)
-                .customNavigationMenuButton(ButtonMenu())
-                
-            ){
-                Text("vai la")
-            }
+            Button(nomeMenu, action: {
+                menuModel.openCloseMenu()
+            })
             
-        .foregroundColor(.orange)
+    }
+}
+
+class MenuModel: ObservableObject{
+    @Published var isOpenMenu: Bool = false
+    
+    func openCloseMenu(){
+        withAnimation(.default){
+            isOpenMenu.toggle()
+        }
     }
 }

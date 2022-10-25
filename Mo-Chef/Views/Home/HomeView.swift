@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject private var menuModel = MenuModel()
+
     var body: some View {
-        VStack{
-            ZStack{
-                Color.blue
-                Text("Home view")
-            }
-        }
-        
+        Color.yellow.ignoresSafeArea()
     }
 }
 

@@ -9,10 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject private var menuModel = MenuModel()
+    @ObservedObject var menuModel = MenuModel()
 
     var body: some View {
-        Color.yellow.ignoresSafeArea()
+        CustomNavView(){
+            CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                .customNavigationTitolo(Text("ora siam qua"))
+                .customNavigationEditButton(ButtonEdit())
+            ){
+                
+                    Text("vai via").foregroundColor(.red)
+                
+            }
+            .customNavigationTitolo(Text("Eccoci qua").foregroundColor(.green))
+            .customNavigationShowBackButton(false)
+            .customNavigationColoreTitolo(.red)
+            .customNavigationColoreSfondo(.blue)
+            
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, nomeMenu: "Menù")
+                
+            )
+        }
+        
     }
 }
 

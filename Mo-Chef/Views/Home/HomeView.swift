@@ -17,18 +17,23 @@ struct HomeView: View {
                 .customNavigationTitolo(Text("ora siam qua"))
                 .customNavigationEditButton(ButtonEdit())
             ){
-                
+                ZStack{
+                    Color.yellow
                     Text("vai via").foregroundColor(.red)
-                
+                }
             }
-            .customNavigationTitolo(Text("Eccoci qua").foregroundColor(.green))
+            .customNavigationTitolo(Text("Eccoci qua")
+                .foregroundColor(.green)
+                
+            )
             .customNavigationShowBackButton(false)
             .customNavigationColoreTitolo(.red)
-            .customNavigationColoreSfondo(.blue)
+            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
             
             .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, nomeMenu: "Menù")
                 
             )
+            //.customNavigationEditButton(ButtonEdit())
         }
         
     }

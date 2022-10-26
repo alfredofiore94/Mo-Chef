@@ -18,15 +18,15 @@ struct ContentView: View {
         } else {
             CustomTabBarContainer(tabSelezionato: $tabIniziale, coloreSfondo: Mo_ChefApp.arancioneCosmo, coloreSelezione: Mo_ChefApp.verdeScuro){
                 
-                BilanciaView()
+                BilanciaView(menuModel: menuModel)
                     .customTabBarItem(tab: .bilancia, tabSelect: $tabIniziale)
-                CategorieView()
+                CategorieView(menuModel: menuModel)
                     .customTabBarItem(tab: .categorie, tabSelect: $tabIniziale)
                 HomeView(menuModel: menuModel)
                     .customTabBarItem(tab: .home, tabSelect: $tabIniziale)
-                CercaView()
+                CercaView(menuModel: menuModel)
                     .customTabBarItem(tab: .cerca, tabSelect: $tabIniziale)
-                ListaSpesaView()
+                ListaSpesaView(menuModel: menuModel)
                     .customTabBarItem(tab:.listaSpesa, tabSelect: $tabIniziale)
             }
         }

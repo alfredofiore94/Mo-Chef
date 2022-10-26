@@ -13,7 +13,7 @@ struct ButtonEdit: View, Equatable {
     
     var body: some View {
         
-        return Button("edit"){
+        return Button("Edit"){
             
         }.foregroundColor(.red)
     }

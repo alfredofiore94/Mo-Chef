@@ -26,18 +26,19 @@ struct CustomNavBarView: View {
     let buttonEdit: ButtonEdit?
     let buttonMenu: ButtonMenu?
 
-    
+
     var body: some View {
         HStack{
             if showBackBtn != nil && showBackBtn == true {
                 backButton
+                    .frame(width: 40)
             }
             else if buttonMenu != nil {
                 buttonMenu
+                    .frame(width: 60)
             }
             Spacer()
             textTitles
-            
             Spacer()
             /*
             if showNextBtn != nil && showNextBtn == true {
@@ -46,6 +47,15 @@ struct CustomNavBarView: View {
             */
             if buttonEdit != nil {
                 buttonEdit
+            }
+            
+            if buttonMenu != nil {
+                Spacer()
+                    .frame(width: 60)
+            }
+            else if showBackBtn != nil && showBackBtn == true {
+                Spacer()
+                    .frame(width: 40)
             }
         }
         .padding()
@@ -88,21 +98,25 @@ extension CustomNavBarView {
         VStack{
             titolo
                 .foregroundColor(coloreTitolo)
+                .frame(alignment: .center)
             if let sottotitolo = sottotitolo {
                 Text(sottotitolo)
                 .foregroundColor(coloreSottotitolo)
             }
             
-        }
+        }.frame(alignment: .center)
     }
+    
 }
 
 
 
 struct CustomNavBarView_Previews: PreviewProvider {
+
     static var previews: some View {
+
         VStack{
-            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .gray, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: nil, showNextBtn: nil, buttonEdit: nil, buttonMenu: nil)
+            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .yellow, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: true, showNextBtn: nil, buttonEdit: nil, buttonMenu: nil)
             Spacer()
         }
     }

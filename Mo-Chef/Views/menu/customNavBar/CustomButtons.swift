@@ -11,17 +11,30 @@ import SwiftUI
 struct ButtonEdit: View, Equatable {
     
     
+    @ObservedObject var editModel: EditModel
+    let icona: String
+    let coloreIcona: Color
+
+    static func == (lhs: ButtonEdit, rhs: ButtonEdit) -> Bool {
+        return lhs.editModel.isOpenEdit == rhs.editModel.isOpenEdit
+    }
+    
     var body: some View {
-        
-        return Button("Edit"){
-            
-        }.foregroundColor(.red)
+        return
+            Button(action: {
+                editModel.openCloseEdit()
+            }, label:{
+                Image(icona)
+                    .renderingMode(.template)
+                    .foregroundColor(coloreIcona)
+            })
     }
 }
 
 struct ButtonMenu: View, Equatable {
     @ObservedObject var menuModel: MenuModel
-    let nomeMenu: String
+    let icona: String
+    let coloreIcona: Color
 
     static func == (lhs: ButtonMenu, rhs: ButtonMenu) -> Bool {
         return lhs.menuModel.isOpenMenu == rhs.menuModel.isOpenMenu
@@ -29,10 +42,13 @@ struct ButtonMenu: View, Equatable {
     
     var body: some View {
         return 
-            Button(nomeMenu, action: {
+            Button(action: {
                 menuModel.openCloseMenu()
-            })
-            
+            }, label:{
+                Image(icona)
+                    .renderingMode(.template)
+                    .foregroundColor(coloreIcona)
+            }) 
     }
 }
 
@@ -42,6 +58,16 @@ class MenuModel: ObservableObject{
     func openCloseMenu(){
         withAnimation(.default){
             isOpenMenu.toggle()
+        }
+    }
+}
+
+class EditModel: ObservableObject{
+    @Published var isOpenEdit: Bool = false
+    
+    func openCloseEdit(){
+        withAnimation(.default){
+            isOpenEdit.toggle()
         }
     }
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct MenuView: View {
     
-    @StateObject var menuModel: MenuModel
-    
+    @ObservedObject var menuModel: MenuModel
+    @ObservedObject var editModel: EditModel
+
     var body: some View {
         CustomNavView(){
             ZStack{
@@ -18,7 +19,7 @@ struct MenuView: View {
                 
                 CustomNavLink(destinazione: Text("me ne sono andato")
                     .customNavigationTitolo(Text("ora siam qua"))
-                    .customNavigationEditButton(ButtonEdit())
+                    .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "X", coloreIcona: .white))
                 ){
                     Text("vai la")
                 }
@@ -27,7 +28,7 @@ struct MenuView: View {
             .customNavigationShowBackButton(false)
             .customNavigationColoreTitolo(.red)
             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, nomeMenu: "X"))
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "X", coloreIcona: .white))
         }
 
     }
@@ -37,7 +38,8 @@ struct MenuView_Previews: PreviewProvider {
 
     static var previews: some View {
         let menuModel =  MenuModel()
+        let editModel =  EditModel()
 
-        MenuView(menuModel: menuModel)
+        MenuView(menuModel: menuModel, editModel: editModel)
     }
 }

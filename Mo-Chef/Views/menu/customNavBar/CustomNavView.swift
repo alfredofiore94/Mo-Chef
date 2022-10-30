@@ -31,16 +31,17 @@ struct CustomNavView <Content:View> : View {
 
 struct CustomNavView_Previews: PreviewProvider {
     
-    let buttonE: ButtonEdit = ButtonEdit()
-    
     static var previews: some View {
+        
+      
+
         CustomNavView(){
             ZStack{
                 Color.yellow.ignoresSafeArea()
                 
                 CustomNavLink(destinazione: Text("me ne sono andato")
                     .customNavigationTitolo(Text("ora siam qua"))
-                    .customNavigationEditButton(ButtonEdit())
+//                    .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
                 ){
                     Text("vai la")
                 }

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct BilanciaView: View {
     @ObservedObject var menuModel = MenuModel()
+    @ObservedObject var editModel = EditModel()
 
     var body: some View {
         CustomNavView(){
             CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
                 .customNavigationTitolo(Text("ora siam qua"))
-                .customNavigationEditButton(ButtonEdit())
+                .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
             ){
                 
                     Text("vai via").foregroundColor(.red)
@@ -25,7 +26,7 @@ struct BilanciaView: View {
             .customNavigationColoreTitolo(.red)
             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
             
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, nomeMenu: "Menù")
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
                 
             )
         }

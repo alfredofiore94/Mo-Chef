@@ -31,11 +31,11 @@ struct CustomNavBarView: View {
         HStack{
             if showBackBtn != nil && showBackBtn == true {
                 backButton
-                    .frame(width: 40)
+                    .frame(width: 40, alignment: .leading)
             }
             else if buttonMenu != nil {
                 buttonMenu
-                    .frame(width: 60)
+                    .frame(width: 40, alignment: .leading)
             }
             Spacer()
             textTitles
@@ -47,13 +47,14 @@ struct CustomNavBarView: View {
             */
             if buttonEdit != nil {
                 buttonEdit
+                    .frame(width: 40, alignment: .trailing)
             }
             
-            if buttonMenu != nil {
+            if buttonMenu != nil && buttonEdit == nil {
                 Spacer()
-                    .frame(width: 60)
+                    .frame(width: 40)
             }
-            else if showBackBtn != nil && showBackBtn == true {
+            else if showBackBtn != nil && showBackBtn == true && buttonEdit == nil{
                 Spacer()
                     .frame(width: 40)
             }

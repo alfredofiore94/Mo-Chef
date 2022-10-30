@@ -11,10 +11,11 @@ struct ContentView: View {
     
     @State private var tabIniziale: CustomTabBarItem = .home
     @ObservedObject private var menuModel = MenuModel()
+    @ObservedObject private var editModel = EditModel()
 
     var body: some View {
         if menuModel.isOpenMenu{
-            MenuView(menuModel: menuModel)
+            MenuView(menuModel: menuModel, editModel: editModel)
         } else {
             CustomTabBarContainer(tabSelezionato: $tabIniziale, coloreSfondo: Mo_ChefApp.arancioneCosmo, coloreSelezione: Mo_ChefApp.verdeScuro){
                 

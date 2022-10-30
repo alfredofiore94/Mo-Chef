@@ -28,7 +28,7 @@ struct MenuView: View {
             .customNavigationShowBackButton(false)
             .customNavigationColoreTitolo(.red)
             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "X", coloreIcona: .white))
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "close_img", coloreIcona: .white))
         }
 
     }

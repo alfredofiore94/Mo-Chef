@@ -19,7 +19,7 @@ struct HomeView: View {
                 .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
             ){
                 ZStack{
-                    Color.yellow
+                    Color.white
                     Text("vai via").foregroundColor(.red)
                 }
             }

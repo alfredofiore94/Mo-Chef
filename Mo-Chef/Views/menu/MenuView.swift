@@ -16,21 +16,55 @@ struct MenuView: View {
         CustomNavView(){
             ZStack{
                 Color.white.ignoresSafeArea()
-                
-                CustomNavLink(destinazione: Text("me ne sono andato")
-                    .customNavigationTitolo(Text("ora siam qua"))
-                    .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "X", coloreIcona: .white))
-                ){
-                    Text("vai la")
+                ScrollView{
+                    VStack{
+                        CustomNavLink(destinazione: Text("me ne sono andato")
+                            .customNavigationTitolo(
+                                Text("Chi siamo")
+                                                    )
+                            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                            .customNavigationColoreTitolo(.white)
+                        ){
+                            menuButton(nome: "Chi siamo")
+                        }
+                        
+                        CustomNavLink(destinazione: Text("me ne sono andato")
+                            .customNavigationTitolo(Text("Credits"))
+                            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                            .customNavigationColoreTitolo(.white)
+                        ){
+                            menuButton(nome: "Credits")
+                        }
+                    }
                 }
             }
-            .customNavigationTitolo(Text("menù").foregroundColor(.white))
+            .customNavigationTitolo(Text("Menù").foregroundColor(.white)
+                .font(.system(size: 30))
+            )
             .customNavigationShowBackButton(false)
-            .customNavigationColoreTitolo(.red)
             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
             .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "close_img", coloreIcona: .white))
         }
 
+    }
+}
+
+extension MenuView {
+    
+    func menuButton(nome: String) -> some View{
+        return ZStack{
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(Mo_ChefApp.verdeScuro, lineWidth: 5)
+                .background(RoundedRectangle(cornerRadius: 15).fill(Color.white))
+            Text(nome)
+        }
+        .frame(width: .infinity, height: 50)
+        .padding(.trailing, 30)
+        .padding(.leading, 30)
+        .padding(.bottom, 0)
+        .padding(.top, 30)
+        .foregroundColor(Mo_ChefApp.arancioneCosmo)
+        .font(.custom("SF Pro Text", size: 25))
     }
 }
 

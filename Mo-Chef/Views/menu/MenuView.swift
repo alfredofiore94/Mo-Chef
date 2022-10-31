@@ -18,7 +18,7 @@ struct MenuView: View {
                 Color.white.ignoresSafeArea()
                 ScrollView{
                     VStack{
-                        CustomNavLink(destinazione: Text("me ne sono andato")
+                        CustomNavLink(destinazione: WhoAreView()
                             .customNavigationTitolo(
                                 Text("Chi siamo")
                                                     )

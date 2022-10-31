@@ -28,6 +28,7 @@
 		9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */; };
 		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
 		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
+		9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D86291080A9007E2121 /* WhoAreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
+		9FE18D86291080A9007E2121 /* WhoAreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				9FCAC2E429004EBA00CFA084 /* MenuView.swift */,
 				9FE18D8429107F14007E2121 /* CreditView.swift */,
+				9FE18D86291080A9007E2121 /* WhoAreView.swift */,
 				9F30907828FEEEC70027F12B /* customNavBar */,
 				9F30905928FE9AE30027F12B /* customTabBar */,
 			);
@@ -278,6 +281,7 @@
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
 				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
 				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,
+				9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */,
 				9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
 				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,

@@ -8,12 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var menuModel = MenuModel()
+    @ObservedObject var editModel = EditModel()
+
     var body: some View {
-        VStack{
-            ZStack{
-                Color.blue
-                Text("Home view")
+        CustomNavView(){
+            CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                .customNavigationTitolo(Text("ora siam qua"))
+                .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+            ){
+                ZStack{
+                    Color.white
+                    Text("vai via").foregroundColor(.red)
+                }
             }
+            .customNavigationTitolo(Text("Eccoci qua")
+                .foregroundColor(.green)
+                
+            )
+            .customNavigationShowBackButton(false)
+            .customNavigationColoreTitolo(.red)
+            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+            
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
+            )
+            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
         }
         
     }

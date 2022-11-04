@@ -16,6 +16,8 @@
 		9F30907328FEB4150027F12B /* CercaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907228FEB4140027F12B /* CercaView.swift */; };
 		9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907428FEB42D0027F12B /* ListaSpesaView.swift */; };
 		9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907628FEE0910027F12B /* CustomTabBarItems.swift */; };
+		9F39DB6E29154B3D004E910A /* RicettaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F39DB6D29154B3D004E910A /* RicettaCardView.swift */; };
+		9F39DB7129154C4A004E910A /* Ricetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F39DB7029154C4A004E910A /* Ricetta.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		9F30907228FEB4140027F12B /* CercaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaView.swift; sourceTree = "<group>"; };
 		9F30907428FEB42D0027F12B /* ListaSpesaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSpesaView.swift; sourceTree = "<group>"; };
 		9F30907628FEE0910027F12B /* CustomTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItems.swift; sourceTree = "<group>"; };
+		9F39DB6D29154B3D004E910A /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
+		9F39DB7029154C4A004E910A /* Ricetta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F81788728FE9471002296BC /* Mo_ChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mo_ChefApp.swift; sourceTree = "<group>"; };
 		9F81788928FE9471002296BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9F30906C28FEB3C80027F12B /* HomeView.swift */,
+				9F39DB6D29154B3D004E910A /* RicettaCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -125,6 +130,14 @@
 			path = ListaSpesa;
 			sourceTree = "<group>";
 		};
+		9F39DB6F29154C18004E910A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				9F39DB7029154C4A004E910A /* Ricetta.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		9F81787B28FE9471002296BC = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		9F81788628FE9471002296BC /* Mo-Chef */ = {
 			isa = PBXGroup;
 			children = (
+				9F39DB6F29154C18004E910A /* models */,
 				9F30906728FEB2E30027F12B /* Views */,
 				9F81788B28FE9472002296BC /* Assets.xcassets */,
 				9F81788D28FE9472002296BC /* Mo_Chef.entitlements */,
@@ -231,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F81788A28FE9471002296BC /* ContentView.swift in Sources */,
+				9F39DB6E29154B3D004E910A /* RicettaCardView.swift in Sources */,
 				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
@@ -240,6 +255,7 @@
 				9F30906F28FEB3D90027F12B /* BilanciaView.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
+				9F39DB7129154C4A004E910A /* Ricetta.swift in Sources */,
 				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

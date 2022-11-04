@@ -10,26 +10,20 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var tabIniziale: CustomTabBarItem = .home
-    @ObservedObject private var menuModel = MenuModel()
-    @ObservedObject private var editModel = EditModel()
-
     var body: some View {
-        if menuModel.isOpenMenu{
-            MenuView(menuModel: menuModel, editModel: editModel)
-        } else {
-            CustomTabBarContainer(tabSelezionato: $tabIniziale, coloreSfondo: Mo_ChefApp.arancioneCosmo, coloreSelezione: Mo_ChefApp.verdeScuro){
-                
-                BilanciaView(menuModel: menuModel)
-                    .customTabBarItem(tab: .bilancia, tabSelect: $tabIniziale)
-                CategorieView(menuModel: menuModel)
-                    .customTabBarItem(tab: .categorie, tabSelect: $tabIniziale)
-                HomeView(menuModel: menuModel)
-                    .customTabBarItem(tab: .home, tabSelect: $tabIniziale)
-                CercaView(menuModel: menuModel)
-                    .customTabBarItem(tab: .cerca, tabSelect: $tabIniziale)
-                ListaSpesaView(menuModel: menuModel)
-                    .customTabBarItem(tab:.listaSpesa, tabSelect: $tabIniziale)
-            }
+        
+        CustomTabBarContainer(tabSelezionato: $tabIniziale, coloreSfondo: Mo_ChefApp.arancioneCosmo, coloreSelezione: Mo_ChefApp.verdeScuro){
+            
+            BilanciaView()
+                .customTabBarItem(tab: .bilancia, tabSelect: $tabIniziale)
+            CategorieView()
+                .customTabBarItem(tab: .categorie, tabSelect: $tabIniziale)
+            HomeView()
+                .customTabBarItem(tab: .home, tabSelect: $tabIniziale)
+            CercaView()
+                .customTabBarItem(tab: .cerca, tabSelect: $tabIniziale)
+            ListaSpesaView()
+                .customTabBarItem(tab:.listaSpesa, tabSelect: $tabIniziale)
         }
     }
 }
@@ -39,8 +33,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().ignoresSafeArea()
     }
 }
-
-
-/*
- 
- */

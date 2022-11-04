@@ -22,6 +22,10 @@
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
 		9F81789028FE9472002296BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788F28FE9472002296BC /* Preview Assets.xcassets */; };
+		9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */; };
+		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
+		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
+		9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D86291080A9007E2121 /* WhoAreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,11 @@
 		9F30907228FEB4140027F12B /* CercaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CercaView.swift; sourceTree = "<group>"; };
 		9F30907428FEB42D0027F12B /* ListaSpesaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSpesaView.swift; sourceTree = "<group>"; };
 		9F30907628FEE0910027F12B /* CustomTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItems.swift; sourceTree = "<group>"; };
+		9F30907928FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
+		9F30907A28FEEEFB0027F12B /* CustomNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
+		9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		9F39DB6D29154B3D004E910A /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
 		9F39DB7029154C4A004E910A /* Ricetta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +51,10 @@
 		9F81788B28FE9472002296BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F81788D28FE9472002296BC /* Mo_Chef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mo_Chef.entitlements; sourceTree = "<group>"; };
 		9F81788F28FE9472002296BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
+		9FE18D86291080A9007E2121 /* WhoAreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,10 @@
 		9F30905828FE9AC70027F12B /* menu */ = {
 			isa = PBXGroup;
 			children = (
+				9FCAC2E429004EBA00CFA084 /* MenuView.swift */,
+				9FE18D8429107F14007E2121 /* CreditView.swift */,
+				9FE18D86291080A9007E2121 /* WhoAreView.swift */,
+				9F30907828FEEEC70027F12B /* customNavBar */,
 				9F30905928FE9AE30027F12B /* customTabBar */,
 			);
 			path = menu;
@@ -247,13 +264,22 @@
 				9F81788A28FE9471002296BC /* ContentView.swift in Sources */,
 				9F39DB6E29154B3D004E910A /* RicettaCardView.swift in Sources */,
 				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
+				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
+				9FE18D8529107F14007E2121 /* CreditView.swift in Sources */,
+				9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,
 				9F30907328FEB4150027F12B /* CercaView.swift in Sources */,
 				9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */,
 				9F30906F28FEB3D90027F12B /* BilanciaView.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
+				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
+				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
+				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
+				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,
+				9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */,
+				9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */,
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
 				9F39DB7129154C4A004E910A /* Ricetta.swift in Sources */,
 				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,

@@ -30,6 +30,7 @@
 		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
 		9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D86291080A9007E2121 /* WhoAreView.swift */; };
 		9FEAF423291A65EF00102EAC /* Ricetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF422291A65EF00102EAC /* Ricetta.swift */; };
+		9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF424291A69E000102EAC /* RicettaCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		9FE18D86291080A9007E2121 /* WhoAreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAreView.swift; sourceTree = "<group>"; };
 		9FEAF422291A65EF00102EAC /* Ricetta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
+		9FEAF424291A69E000102EAC /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9F30906C28FEB3C80027F12B /* HomeView.swift */,
+				9FEAF424291A69E000102EAC /* RicettaCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
 				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
+				9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */,
 				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,
 				9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */,
 				9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */,

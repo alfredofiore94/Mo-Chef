@@ -57,10 +57,14 @@ struct InfoRicetta: View {
     
     var nome: String
     var immagine: String
+    var coloreNome: Color?
+    var coloreIcona: Color?
 
-    init(_ nome: String, _ immagine: String) {
+    init(_ nome: String, _ immagine: String,  coloreNome: Color? = Mo_ChefApp.verdeScuro ,  coloreIcona: Color? = Mo_ChefApp.verdeScuro) {
         self.nome = nome
         self.immagine = immagine
+        self.coloreNome = coloreNome
+        self.coloreIcona = coloreIcona
 
     }
 
@@ -68,9 +72,11 @@ struct InfoRicetta: View {
         HStack{
             Image(immagine)
                 .renderingMode(.template)
+                .foregroundColor(coloreIcona)
             Text(nome)
+                .foregroundColor(coloreNome)
+
         }
-        
     }
 }
 
@@ -84,7 +90,7 @@ struct RicettaCard_Previews: PreviewProvider {
         for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
         }
         
-        let ricettaTmp = Ricetta(nomePiatto: "Pandoro", tipopiatto: "Dolce", difficolta: "Media", tempoPrep: "48 ore", costo: "16,50€", listaIngredinti: listaIngr)
+        let ricettaTmp = Ricetta(nomePiatto: "Pandoro", tipopiatto: "Dolce", difficolta: "Media", tempoPrep: "48 ore", costo: "16,50€", numeroPersone: 5, listaIngredinti: listaIngr)
         
         return RicettaCardView(ricetta: ricettaTmp)
 

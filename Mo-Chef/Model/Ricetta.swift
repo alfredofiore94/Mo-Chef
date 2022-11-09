@@ -17,8 +17,9 @@ struct Ricetta: Identifiable {
     var costo : String
     var numeroPersone: Int
     var listaIngredienti: [Ingrediente]
+    var listaStep: [StepProcedimento]
     
-    init(nomePiatto: String, tipopiatto: String, difficolta: String, tempoPrep: String, costo: String, numeroPersone: Int, listaIngredinti: [Ingrediente]){
+    init(nomePiatto: String, tipopiatto: String, difficolta: String, tempoPrep: String, costo: String, numeroPersone: Int, listaIngredinti: [Ingrediente], listastep: [StepProcedimento]){
         self.nomePiatto = nomePiatto
         self.tipoPiatto = tipopiatto
         self.difficolta = difficolta
@@ -26,6 +27,7 @@ struct Ricetta: Identifiable {
         self.costo = costo
         self.numeroPersone = numeroPersone
         self.listaIngredienti = listaIngredinti
+        self.listaStep = listastep
     }
 }
 
@@ -45,14 +47,14 @@ struct Ingrediente: Identifiable {
     }
 }
 
-struct StepProcedimento: Hashable {
+struct StepProcedimento: Identifiable, Hashable {
     
     let id: String = UUID().uuidString
-    var nome: String?
+    var nome: String
     var descrizione: String
     var immagini: [String]
     
-    init(nome: String? = nil, descrizione: String, immagini: [String]){
+    init(nome: String , descrizione: String, immagini: [String]){
         self.nome = nome
         self.descrizione = descrizione
         self.immagini = immagini

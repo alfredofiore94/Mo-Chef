@@ -12,53 +12,67 @@ struct DettaglioRicettaView: View {
     @State var ricetta: Ricetta
     
     var body: some View {
-        ScrollView{
-            Spacer()
-            VStack{
+        ZStack{
+            Color.white
+            ScrollView{
+                Spacer()
                 HStack{
-                    InfoRicetta(self.ricetta.difficolta, "chef_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
-                        .foregroundColor(.red)
+                    Text("Presentazione")
+                        .font(.system(size: 40, weight: .bold))
                     Spacer()
                 }
                 HStack{
-                    InfoRicetta(self.ricetta.tempoPrep, "timer_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    Text(ricetta.presentazione)
+                        .padding(.leading, 30)
+                    Spacer()
+                }.padding(.bottom)
+                VStack{
                     
-                    Spacer()
+                    HStack{
+                        InfoRicetta(self.ricetta.difficolta, "chef_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                            .foregroundColor(.red)
+                        Spacer()
+                    }
+                    HStack{
+                        InfoRicetta(self.ricetta.tempoPrep, "timer_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                        
+                        Spacer()
+                    }
+                    HStack{
+                        InfoRicetta(self.ricetta.costo, "coin_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                        Spacer()
+                    }
+                    HStack{
+                        InfoRicetta("\(self.ricetta.numeroPersone) persone", "user_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                        Spacer()
+                    }
                 }
+                .padding(.leading, 30)
+                Spacer()
                 HStack{
-                    InfoRicetta(self.ricetta.costo, "coin_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    Text("Ingredienti")
+                        .font(.system(size: 40, weight: .bold))
                     Spacer()
                 }
+                listaIngredientiBox
+                    .padding(.leading, 30)
+                    .padding(.trailing, 30)
+                    .padding(.bottom)
                 HStack{
-                    InfoRicetta(String(self.ricetta.numeroPersone), "user_dt_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    Text("Procedimento")
+                        .font(.system(size: 40, weight: .bold))
                     Spacer()
                 }
+                .padding(.bottom, 5)
+                listaStepBox()
+                    .padding(.leading, 30)
+                    .padding(.trailing, 30)
+                    .padding(.bottom)
             }
             .padding(.leading, 30)
-            Spacer()
-            HStack{
-                Text("Ingredienti")
-                    .font(.system(size: 40, weight: .bold))
-                Spacer()
-            }
-            listaIngredientiBox
-                .padding(.leading, 30)
-                .padding(.trailing, 30)
-                .padding(.bottom)
-            HStack{
-                Text("Procedimento")
-                    .font(.system(size: 40, weight: .bold))
-                Spacer()
-            }
-            .padding(.bottom, 5)
-            listaStepBox()
-                .padding(.leading, 30)
-                .padding(.trailing, 30)
-                .padding(.bottom)
+            .padding(.trailing, 30)
+            .foregroundColor(Mo_ChefApp.verdeScuro)
         }
-        .padding(.leading, 30)
-        .padding(.trailing, 30)
-        .foregroundColor(Mo_ChefApp.verdeScuro)
     }
 }
 
@@ -121,18 +135,8 @@ extension DettaglioRicettaView {
 }
 struct DettaglioRicettaView_Previews: PreviewProvider {
     static var previews: some View {
-        var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
-        let listaStep: [StepProcedimento] = [
-            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza", "pizza"]),
-            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza"])
-        ]
         
-        let count = 1...10
-        for i in count { listaIngr.append(Ingrediente(nome: "farina \(i)", quantita: 23.5 * Float(i), uMisura: "g", isSelezionato: false))
-        }
         
-        let ricetta = Ricetta(nomePiatto: "pasta", tipopiatto: "primo", difficolta: "facile", tempoPrep: "30 ore", costo: "economico", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep)
-        
-        return DettaglioRicettaView(ricetta: ricetta)
+        return DettaglioRicettaView(ricetta: DataTest.getDataTest()[1])
     }
 }

@@ -30,7 +30,7 @@ struct DataTest {
         var ricettaLista: [Ricetta] = []
         
         var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
-        
+        var presentazione = "Piccolo testo di presentazione del piatto. Si può descrivere la storia del piatto o altre introduzioni, come ‘un piatto simbolo dell’Italia"
         let count = 1...10
         for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
         }
@@ -40,8 +40,8 @@ struct DataTest {
             StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza"])
         ]
         
-        ricettaLista.append(Ricetta(nomePiatto: "Pasta", tipopiatto: "primo", difficolta: "facile", tempoPrep: "30 ore", costo: "economico", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep))
-        ricettaLista.append(Ricetta(nomePiatto: "Carne", tipopiatto: "secondo", difficolta: "difficile", tempoPrep: "12 ore", costo: "costoso", numeroPersone: 3, listaIngredinti: listaIngr, listastep: listaStep))
+        ricettaLista.append(Ricetta(nomePiatto: "Pasta", tipopiatto: "primo", difficolta: "facile", tempoPrep: "30 ore", costo: "economico", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep, presentazione: presentazione))
+        ricettaLista.append(Ricetta(nomePiatto: "Carne", tipopiatto: "secondo", difficolta: "difficile", tempoPrep: "12 ore", costo: "costoso", numeroPersone: 3, listaIngredinti: listaIngr, listastep: listaStep, presentazione: presentazione))
         
         return ricettaLista
         

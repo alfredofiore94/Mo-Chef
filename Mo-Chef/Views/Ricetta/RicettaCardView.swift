@@ -83,23 +83,7 @@ struct InfoRicetta: View {
 struct RicettaCard_Previews: PreviewProvider {
     static var previews: some View {
         
-        var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
-        
-        var listaStep: [StepProcedimento] = [
-            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza_img", "pizza_img"]),
-            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza_img"])
-        ]
-        
-        let count = 1...10
-        
-        for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
-        }
-        
-        let ricettaTmp = Ricetta(nomePiatto: "Pandoro", tipopiatto: "Dolce", difficolta: "Media", tempoPrep: "48 ore", costo: "16,50€", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep)
-        
-        return RicettaCardView(ricetta: ricettaTmp)
+        return RicettaCardView(ricetta: DataTest.getDataTest()[0])
 
-        
-        
     }
 }

@@ -13,22 +13,91 @@ struct CategorieView: View {
 
     var body: some View {
         CustomNavView(){
-            CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
-                .customNavigationTitolo(Text("ora siam qua"))
-                .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
-            ){
-                
-                    Text("vai via").foregroundColor(.red)
-                
+            ZStack{
+                Color.white
+                VStack{
+                    HStack{
+                        Spacer()
+                        CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                            .customNavigationTitolo(Text("ora siam qua"))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                        ){
+                            
+                            categoryButton("Antipasti")
+                            
+                        }
+                        Spacer()
+                        CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                            .customNavigationTitolo(Text("ora siam qua"))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                        ){
+                            
+                            categoryButton("Primi")
+                            
+                        }
+                        Spacer()
+                    }
+                    HStack{
+                        Spacer()
+                        CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                            .customNavigationTitolo(Text("ora siam qua"))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                        ){
+                            
+                            categoryButton("Secondi")
+                            
+                        }
+                        Spacer()
+                        CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                            .customNavigationTitolo(Text("ora siam qua"))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                        ){
+                            
+                            categoryButton("Contorni")
+                            
+                        }
+                        Spacer()
+                    }
+                    HStack{
+                        Spacer()
+                        CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                            .customNavigationTitolo(Text("ora siam qua"))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                        ){
+                            
+                            categoryButton("Dolci e \n Frutta")
+                            
+                        }
+                        .customNavigationTitolo(Text("MonChef")
+                                                
+                        )
+                        .customNavigationShowBackButton(false)
+                        .customNavigationColoreTitolo(.white)
+                        .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                        
+                        .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white))
+                        Spacer()
+                    }
+                }
             }
-            .customNavigationTitolo(Text("Eccoci qua").foregroundColor(.green))
-            .customNavigationShowBackButton(false)
-            .customNavigationColoreTitolo(.red)
-            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+        }.foregroundColor(Mo_ChefApp.verdeScuro)
+    }
+}
+
+extension CategorieView {
+    func categoryButton(_ nomeCategoria: String) -> some View{
+        return ZStack{
             
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
-                
-            )
+            Image("dish_img")
+                .renderingMode(.template)
+                .resizable()
+                .aspectRatio(1.0, contentMode: .fit)
+                .clipped()
+                .padding(5) // Width of the border
+                .frame(width: 180)
+
+            Text(nomeCategoria)
+                .font(.system(size: 15, weight: .bold))
         }
     }
 }

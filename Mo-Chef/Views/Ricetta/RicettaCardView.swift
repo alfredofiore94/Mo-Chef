@@ -57,10 +57,14 @@ struct InfoRicetta: View {
     
     var nome: String
     var immagine: String
+    var coloreNome: Color?
+    var coloreIcona: Color?
 
-    init(_ nome: String, _ immagine: String) {
+    init(_ nome: String, _ immagine: String,  coloreNome: Color? = Mo_ChefApp.verdeScuro ,  coloreIcona: Color? = Mo_ChefApp.verdeScuro) {
         self.nome = nome
         self.immagine = immagine
+        self.coloreNome = coloreNome
+        self.coloreIcona = coloreIcona
 
     }
 
@@ -68,9 +72,11 @@ struct InfoRicetta: View {
         HStack{
             Image(immagine)
                 .renderingMode(.template)
+                .foregroundColor(coloreIcona)
             Text(nome)
+                .foregroundColor(coloreNome)
+
         }
-        
     }
 }
 
@@ -79,12 +85,17 @@ struct RicettaCard_Previews: PreviewProvider {
         
         var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
         
+        var listaStep: [StepProcedimento] = [
+            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza_img", "pizza_img"]),
+            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza_img"])
+        ]
+        
         let count = 1...10
         
         for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
         }
         
-        let ricettaTmp = Ricetta(nomePiatto: "Pandoro", tipopiatto: "Dolce", difficolta: "Media", tempoPrep: "48 ore", costo: "16,50€", listaIngredinti: listaIngr)
+        let ricettaTmp = Ricetta(nomePiatto: "Pandoro", tipopiatto: "Dolce", difficolta: "Media", tempoPrep: "48 ore", costo: "16,50€", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep)
         
         return RicettaCardView(ricetta: ricettaTmp)
 

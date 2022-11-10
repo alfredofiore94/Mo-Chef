@@ -31,6 +31,7 @@
 		9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D86291080A9007E2121 /* WhoAreView.swift */; };
 		9FEAF423291A65EF00102EAC /* Ricetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF422291A65EF00102EAC /* Ricetta.swift */; };
 		9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF424291A69E000102EAC /* RicettaCardView.swift */; };
+		9FEAF428291A740300102EAC /* DettaglioRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9FE18D86291080A9007E2121 /* WhoAreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAreView.swift; sourceTree = "<group>"; };
 		9FEAF422291A65EF00102EAC /* Ricetta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
 		9FEAF424291A69E000102EAC /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
+		9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioRicettaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				9F30906C28FEB3C80027F12B /* HomeView.swift */,
-				9FEAF424291A69E000102EAC /* RicettaCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -110,6 +111,7 @@
 			children = (
 				9F81788728FE9471002296BC /* Mo_ChefApp.swift */,
 				9F81788928FE9471002296BC /* ContentView.swift */,
+				9FEAF426291A726900102EAC /* Ricetta */,
 				9F30905828FE9AC70027F12B /* menu */,
 				9F30906828FEB3070027F12B /* Bilancia */,
 				9F30906928FEB3340027F12B /* Categorie */,
@@ -209,6 +211,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9FEAF426291A726900102EAC /* Ricetta */ = {
+			isa = PBXGroup;
+			children = (
+				9FEAF424291A69E000102EAC /* RicettaCardView.swift */,
+				9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */,
+			);
+			path = Ricetta;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +304,7 @@
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
+				9FEAF428291A740300102EAC /* DettaglioRicettaView.swift in Sources */,
 				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
 				9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */,
 				9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */,

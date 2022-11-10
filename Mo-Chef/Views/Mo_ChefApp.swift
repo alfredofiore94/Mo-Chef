@@ -30,7 +30,7 @@ struct DataTest {
         var ricettaLista: [Ricetta] = []
         
         var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
-        var presentazione = "Piccolo testo di presentazione del piatto. Si può descrivere la storia del piatto o altre introduzioni, come ‘un piatto simbolo dell’Italia"
+        let presentazione = "Piccolo testo di presentazione del piatto. Si può descrivere la storia del piatto o altre introduzioni, come ‘un piatto simbolo dell’Italia"
         let count = 1...10
         for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
         }
@@ -42,6 +42,7 @@ struct DataTest {
         
         ricettaLista.append(Ricetta(nomePiatto: "Pasta", tipopiatto: "primo", difficolta: "facile", tempoPrep: "30 ore", costo: "economico", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep, presentazione: presentazione))
         ricettaLista.append(Ricetta(nomePiatto: "Carne", tipopiatto: "secondo", difficolta: "difficile", tempoPrep: "12 ore", costo: "costoso", numeroPersone: 3, listaIngredinti: listaIngr, listastep: listaStep, presentazione: presentazione))
+        ricettaLista.append(Ricetta(nomePiatto: "Cavatelli al sugo di cinghiale", tipopiatto: "secondo", difficolta: "difficile", tempoPrep: "12 ore", costo: "costoso", numeroPersone: 3, listaIngredinti: listaIngr, listastep: listaStep, presentazione: presentazione))
         
         return ricettaLista
         

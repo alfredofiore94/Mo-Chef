@@ -11,36 +11,42 @@ struct HomeView: View {
     
     @ObservedObject var menuModel = MenuModel()
     @ObservedObject var editModel = EditModel()
+    @State var ricetteList: [Ricetta]
+
 
     var body: some View {
         CustomNavView(){
-            CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
-                .customNavigationTitolo(Text("ora siam qua"))
-                .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
-            ){
-                ZStack{
-                    Color.white
-                    Text("vai via").foregroundColor(.red)
+            ScrollView{
+                VStack{
+                    ForEach(ricetteList){ ricetta in
+                        CustomNavLink(destinazione: DettaglioRicettaView(ricetta: ricetta)
+                            .customNavigationTitolo(Text(ricetta.nomePiatto))
+                            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                            .customNavigationColoreTitolo(.white)
+                            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                        ){
+                            RicettaCardView(ricetta: ricetta)
+                        }
+                        .customNavigationTitolo(Text("MonChef")
+                            
+                        )
+                        .customNavigationShowBackButton(false)
+                        .customNavigationColoreTitolo(.white)
+                        .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                        
+                        .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
+                        )
+                    }
                 }
             }
-            .customNavigationTitolo(Text("Eccoci qua")
-                .foregroundColor(.green)
-                
-            )
-            .customNavigationShowBackButton(false)
-            .customNavigationColoreTitolo(.red)
-            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-            
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
-            )
-            .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
         }
-        
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        
+        
+        return HomeView(ricetteList: DataTest.getDataTest())
     }
 }

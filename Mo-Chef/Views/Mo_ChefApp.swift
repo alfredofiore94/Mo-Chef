@@ -24,3 +24,26 @@ struct Mo_ChefApp: App {
         }
     }
 }
+
+struct DataTest {
+    static func getDataTest() -> [Ricetta]{
+        var ricettaLista: [Ricetta] = []
+        
+        var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
+        
+        let count = 1...10
+        for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
+        }
+        
+        let listaStep: [StepProcedimento] = [
+            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza", "pizza"]),
+            StepProcedimento(nome: "Lievitino", descrizione: "Prima di tutto preparate l'emulsione aromatica che è ciò determina sapore e profumo al pandoro, ecco perchè questo passaggio non andrebbe mai trascurato o sottovalutato.", immagini: ["pizza"])
+        ]
+        
+        ricettaLista.append(Ricetta(nomePiatto: "Pasta", tipopiatto: "primo", difficolta: "facile", tempoPrep: "30 ore", costo: "economico", numeroPersone: 5, listaIngredinti: listaIngr, listastep: listaStep))
+        ricettaLista.append(Ricetta(nomePiatto: "Carne", tipopiatto: "secondo", difficolta: "difficile", tempoPrep: "12 ore", costo: "costoso", numeroPersone: 3, listaIngredinti: listaIngr, listastep: listaStep))
+        
+        return ricettaLista
+        
+    }
+}

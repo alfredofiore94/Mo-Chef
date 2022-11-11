@@ -22,30 +22,29 @@ struct RicettaCardView: View {
                         .font(.system(size: 18))
                     Text(self.ricetta.nomePiatto)
                         .padding(.leading)
-                        .padding(.bottom)
+                        //.padding(.bottom)
                         .padding(.top)
                         .font(.system(size: 30))
-                   
+                        .multilineTextAlignment(.leading)
+                   Spacer()
                 }
                 .padding()
                 Spacer()
                 VStack(alignment: .leading){
-
-                    InfoRicetta(self.ricetta.difficolta, "chef_img")
-                    InfoRicetta(self.ricetta.tempoPrep, "timer_img")
-                    InfoRicetta(self.ricetta.costo, "coin_img")
-
-                    
+                    Spacer()
+                    InfoRicetta(self.ricetta.difficolta, "chef_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    InfoRicetta(self.ricetta.tempoPrep, "timer_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    InfoRicetta(self.ricetta.costo, "coin_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    InfoRicetta("\(self.ricetta.numeroPersone) persone", "user_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    Spacer()
                 }
+                .frame(width: 100)
                 .font(.system(size: 12))
-                .padding(.trailing, 50)
-                .padding(.top, 40)
-                
+                .padding(.trailing, 10)
             }
-            
         }
-        
-        .frame(width: .infinity, height: 150)
+        .frame(minHeight: 150)
+        .frame(maxHeight: 300)
         .padding(20)
         .foregroundColor(Mo_ChefApp.verdeScuro)
         .font(.custom("SF Pro Text", size: 15))
@@ -75,7 +74,7 @@ struct InfoRicetta: View {
                 .foregroundColor(coloreIcona)
             Text(nome)
                 .foregroundColor(coloreNome)
-
+            Spacer()
         }
     }
 }

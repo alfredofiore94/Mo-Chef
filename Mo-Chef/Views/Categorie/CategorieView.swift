@@ -16,6 +16,7 @@ struct CategorieView: View {
             ZStack{
                 Color.white
                 VStack{
+                    Spacer()
                     HStack{
                         Spacer()
                         CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
@@ -36,7 +37,8 @@ struct CategorieView: View {
                             
                         }
                         Spacer()
-                    }
+                    }.frame(maxHeight: 300)
+                    Spacer()
                     HStack{
                         Spacer()
                         CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
@@ -57,9 +59,11 @@ struct CategorieView: View {
                             
                         }
                         Spacer()
-                    }
+                    }.frame(maxHeight: 300)
+                    Spacer()
                     HStack{
                         Spacer()
+                            //.frame(minWidth: 100)
                         CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
                             .customNavigationTitolo(Text("ora siam qua"))
                             .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
@@ -77,7 +81,10 @@ struct CategorieView: View {
                         
                         .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white))
                         Spacer()
-                    }
+                            //.frame(minWidth: 100)
+                            
+                    }.frame(maxHeight: 300)
+                    Spacer()
                 }
             }
         }.foregroundColor(Mo_ChefApp.verdeScuro)
@@ -94,8 +101,9 @@ extension CategorieView {
                 .aspectRatio(1.0, contentMode: .fit)
                 .clipped()
                 .padding(5) // Width of the border
-                .frame(width: 180)
-
+                .frame(minWidth: 200)
+                .frame(maxWidth: 400)
+                //.background(.red)
             Text(nomeCategoria)
                 .font(.system(size: 15, weight: .bold))
         }

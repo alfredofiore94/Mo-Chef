@@ -35,7 +35,7 @@ struct RicettaCardView: View {
                     InfoRicetta(self.ricetta.difficolta, "chef_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
                     InfoRicetta(self.ricetta.tempoPrep, "timer_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
                     InfoRicetta(self.ricetta.costo, "coin_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
-                    InfoRicetta("\(self.ricetta.numeroPersone) persone", "coin_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                    InfoRicetta("\(self.ricetta.numeroPersone) persone", "user_img", coloreIcona: Mo_ChefApp.arancioneCosmo)
                     Spacer()
                 }
                 .frame(width: 100)

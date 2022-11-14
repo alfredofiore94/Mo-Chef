@@ -19,6 +19,7 @@ struct CategorieView: View {
                     Spacer()
                     HStack{
                         Spacer()
+                          
                         CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
                             .customNavigationTitolo(Text("ora siam qua"))
                             .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
@@ -37,7 +38,7 @@ struct CategorieView: View {
                             
                         }
                         Spacer()
-                    }.frame(maxHeight: 300)
+                    }
                     Spacer()
                     HStack{
                         Spacer()
@@ -59,11 +60,12 @@ struct CategorieView: View {
                             
                         }
                         Spacer()
-                    }.frame(maxHeight: 300)
+                    }
                     Spacer()
                     HStack{
                         Spacer()
-                            //.frame(minWidth: 100)
+                            .aspectRatio(0.5, contentMode: .fit)
+                            .clipped()
                         CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
                             .customNavigationTitolo(Text("ora siam qua"))
                             .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
@@ -72,22 +74,26 @@ struct CategorieView: View {
                             categoryButton("Dolci e \n Frutta")
                             
                         }
-                        .customNavigationTitolo(Text("MonChef")
-                                                
-                        )
-                        .customNavigationShowBackButton(false)
-                        .customNavigationColoreTitolo(.white)
-                        .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-                        
-                        .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white))
                         Spacer()
-                            //.frame(minWidth: 100)
-                            
-                    }.frame(maxHeight: 300)
-                    Spacer()
+                            .aspectRatio(0.5, contentMode: .fit)
+                            .clipped()
+                       
+                    }
+                    //Spacer()
+                    
                 }
+
             }
+            .customNavigationTitolo(Text("MonChef")
+                                    
+            )
+            .customNavigationShowBackButton(false)
+            .customNavigationColoreTitolo(.white)
+            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+            
+            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white))
         }.foregroundColor(Mo_ChefApp.verdeScuro)
+        
     }
 }
 
@@ -100,13 +106,13 @@ extension CategorieView {
                 .resizable()
                 .aspectRatio(1.0, contentMode: .fit)
                 .clipped()
-                .padding(5) // Width of the border
-                .frame(minWidth: 200)
-                .frame(maxWidth: 400)
+                .padding(5)
+            
                 //.background(.red)
             Text(nomeCategoria)
                 .font(.system(size: 15, weight: .bold))
         }
+        
     }
 }
 

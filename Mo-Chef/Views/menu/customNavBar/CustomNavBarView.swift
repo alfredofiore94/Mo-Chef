@@ -25,10 +25,12 @@ struct CustomNavBarView: View {
     
     let buttonEdit: ButtonEdit?
     let buttonMenu: ButtonMenu?
+    let buttonAdd: ButtonAdd?
 
 
     var body: some View {
         HStack{
+            // LEFT
             if showBackBtn != nil && showBackBtn == true {
                 backButton
                     .frame(width: 40, alignment: .leading)
@@ -38,7 +40,9 @@ struct CustomNavBarView: View {
                     .frame(width: 40, alignment: .leading)
             }
             Spacer()
+            //CENTER
             textTitles
+            // RIGHT
             Spacer()
             /*
             if showNextBtn != nil && showNextBtn == true {
@@ -49,15 +53,15 @@ struct CustomNavBarView: View {
                 buttonEdit
                     .frame(width: 40, alignment: .trailing)
             }
+            else if buttonAdd != nil {
+                buttonAdd
+                    .frame(width: 40, alignment: .trailing)
+            }
+            else if (showBackBtn == true || buttonMenu != nil) && buttonEdit == nil && buttonAdd == nil {
+                Spacer()
+                    .frame(width: 40)
+            }
             
-            if buttonMenu != nil && buttonEdit == nil {
-                Spacer()
-                    .frame(width: 40)
-            }
-            else if showBackBtn != nil && showBackBtn == true && buttonEdit == nil{
-                Spacer()
-                    .frame(width: 40)
-            }
         }
         .padding()
         .accentColor(.white)
@@ -117,7 +121,7 @@ struct CustomNavBarView_Previews: PreviewProvider {
     static var previews: some View {
 
         VStack{
-            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .yellow, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: true, showNextBtn: nil, buttonEdit: nil, buttonMenu: nil)
+            CustomNavBarView(titolo: Text("ciao titolo nuovo").foregroundColor(.green), coloreSfondo: .yellow, coloreTesti: .red, coloreTitolo: nil, sottotitolo: "sottoooo", coloreSottotitolo: nil, coloreBackButton: nil, showBackBtn: true, showNextBtn: nil, buttonEdit: nil, buttonMenu: nil, buttonAdd: nil)
             Spacer()
         }
     }

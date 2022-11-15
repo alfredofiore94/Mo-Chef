@@ -71,3 +71,20 @@ class EditModel: ObservableObject{
         }
     }
 }
+
+struct ButtonAdd: View {
+    @Binding var push: Bool
+    let icona: String
+    let coloreIcona: Color
+    
+    var body: some View {
+        Button(action: {
+            self.push.toggle()
+        }, label:{
+            Image(icona)
+                .renderingMode(.template)
+                .foregroundColor(coloreIcona)
+        })
+     
+    }
+}

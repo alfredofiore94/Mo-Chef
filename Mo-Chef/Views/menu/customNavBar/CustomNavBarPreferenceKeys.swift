@@ -114,6 +114,16 @@ struct CustomNavBarMenuButtonPreferenceKey: PreferenceKey{
     }
 }
 
+//ADD BUTTON
+struct CustomNavBarAddButtonPreferenceKey: PreferenceKey{
+    
+    static var defaultValue: ButtonAdd? = nil
+    
+    static func reduce(value: inout ButtonAdd?, nextValue: () -> ButtonAdd?) {
+        value = nextValue()
+    }
+}
+
 extension View {
     // TITOLO
     func customNavigationTitolo(_ titolo: Text) -> some View{
@@ -160,8 +170,11 @@ extension View {
     func customNavigationMenuButton(_ menuButton: ButtonMenu?) -> some View{
         preference(key: CustomNavBarMenuButtonPreferenceKey.self, value: menuButton)
     }
+    func customNavigationAddButton(_ addButton: ButtonAdd?) -> some View{
+        preference(key: CustomNavBarAddButtonPreferenceKey.self, value: addButton)
+    }
     
-    func customNavBarItems(titolo: Text, coloreSfondo: Color, coloreTesti: Color, coloreTitolo: Color?, sottotitolo: String? , coloreSottotitolo: Color? , coloreBackButton: Color? , shoBackButton: Bool , editButton: ButtonEdit? , menuButton: ButtonMenu?) -> some View{
+    func customNavBarItems(titolo: Text, coloreSfondo: Color, coloreTesti: Color, coloreTitolo: Color?, sottotitolo: String? , coloreSottotitolo: Color? , coloreBackButton: Color? , shoBackButton: Bool , editButton: ButtonEdit? , menuButton: ButtonMenu?, addButton: ButtonAdd?) -> some View{
         self
             .customNavigationTitolo(titolo)
             .customNavigationColoreSfondo(coloreSfondo)
@@ -173,5 +186,6 @@ extension View {
             //.customNavigationShowNextButton(showNextButton)
             .customNavigationEditButton(editButton)
             .customNavigationMenuButton(menuButton)
+            .customNavigationAddButton(addButton)
     }
 }

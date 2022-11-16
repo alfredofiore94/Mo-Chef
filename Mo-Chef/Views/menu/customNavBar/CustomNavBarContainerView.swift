@@ -90,6 +90,10 @@ struct CustomNavBarContainerView <Content: View> : View {
             value in
             self.buttonMenu = value
         })
+        .onPreferenceChange(CustomNavBarAddButtonPreferenceKey.self ,perform: {
+            value in
+            self.buttonAdd = value
+        })
     }
 }
 

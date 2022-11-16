@@ -72,14 +72,21 @@ class EditModel: ObservableObject{
     }
 }
 
-struct ButtonAdd: View {
+struct ButtonAdd: View, Equatable {
+    static func == (lhs: ButtonAdd, rhs: ButtonAdd) -> Bool {
+        return lhs.push == rhs.push
+
+    }
+    
     @Binding var push: Bool
     let icona: String
     let coloreIcona: Color
     
     var body: some View {
         Button(action: {
-            self.push.toggle()
+            withAnimation(.easeOut(duration: 0.3)) {
+                self.push.toggle()
+            }
         }, label:{
             Image(icona)
                 .renderingMode(.template)

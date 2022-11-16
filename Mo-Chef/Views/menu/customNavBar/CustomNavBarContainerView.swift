@@ -29,6 +29,7 @@ struct CustomNavBarContainerView <Content: View> : View {
     //button edit e menu
     @State var buttonEdit: ButtonEdit? = nil
     @State var buttonMenu: ButtonMenu? = nil
+    @State var buttonAdd: ButtonAdd? = nil
     
     init(@ViewBuilder contenuto: () -> Content){
         
@@ -38,7 +39,7 @@ struct CustomNavBarContainerView <Content: View> : View {
     
     var body: some View {
         VStack(spacing: 0){
-            CustomNavBarView(titolo: titolo, coloreSfondo: coloreSfondo, coloreTesti: coloreTesti, coloreTitolo: coloreTitolo, sottotitolo: sottotitolo, coloreSottotitolo: coloreSottotitolo, coloreBackButton: coloreBackButton, showBackBtn: showBackBtn, showNextBtn: showNextBtn, buttonEdit: buttonEdit, buttonMenu: buttonMenu)
+            CustomNavBarView(titolo: titolo, coloreSfondo: coloreSfondo, coloreTesti: coloreTesti, coloreTitolo: coloreTitolo, sottotitolo: sottotitolo, coloreSottotitolo: coloreSottotitolo, coloreBackButton: coloreBackButton, showBackBtn: showBackBtn, showNextBtn: showNextBtn, buttonEdit: buttonEdit, buttonMenu: buttonMenu, buttonAdd: buttonAdd)
             contenuto
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -88,6 +89,10 @@ struct CustomNavBarContainerView <Content: View> : View {
         .onPreferenceChange(CustomNavBarMenuButtonPreferenceKey.self ,perform: {
             value in
             self.buttonMenu = value
+        })
+        .onPreferenceChange(CustomNavBarAddButtonPreferenceKey.self ,perform: {
+            value in
+            self.buttonAdd = value
         })
     }
 }

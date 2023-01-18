@@ -29,6 +29,8 @@
 		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
 		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
 		9FE18D87291080A9007E2121 /* WhoAreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D86291080A9007E2121 /* WhoAreView.swift */; };
+		9FE294EF292500B4002BA287 /* AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE294EE292500B4002BA287 /* AddRicettaView.swift */; };
+		9FE294F22925024E002BA287 /* Fase1AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE294F12925024E002BA287 /* Fase1AddRicettaView.swift */; };
 		9FEAF423291A65EF00102EAC /* Ricetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF422291A65EF00102EAC /* Ricetta.swift */; };
 		9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF424291A69E000102EAC /* RicettaCardView.swift */; };
 		9FEAF428291A740300102EAC /* DettaglioRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */; };
@@ -59,6 +61,8 @@
 		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		9FE18D86291080A9007E2121 /* WhoAreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoAreView.swift; sourceTree = "<group>"; };
+		9FE294EE292500B4002BA287 /* AddRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRicettaView.swift; sourceTree = "<group>"; };
+		9FE294F12925024E002BA287 /* Fase1AddRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fase1AddRicettaView.swift; sourceTree = "<group>"; };
 		9FEAF422291A65EF00102EAC /* Ricetta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
 		9FEAF424291A69E000102EAC /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
 		9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioRicettaView.swift; sourceTree = "<group>"; };
@@ -203,6 +207,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9FE294ED2925008C002BA287 /* Add-Ricetta */ = {
+			isa = PBXGroup;
+			children = (
+				9FE294EE292500B4002BA287 /* AddRicettaView.swift */,
+				9FE294F0292501DD002BA287 /* fasi-inserimento */,
+			);
+			path = "Add-Ricetta";
+			sourceTree = "<group>";
+		};
+		9FE294F0292501DD002BA287 /* fasi-inserimento */ = {
+			isa = PBXGroup;
+			children = (
+				9FE294F12925024E002BA287 /* Fase1AddRicettaView.swift */,
+			);
+			path = "fasi-inserimento";
+			sourceTree = "<group>";
+		};
 		9FEAF421291A65CC00102EAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +237,7 @@
 			children = (
 				9FEAF424291A69E000102EAC /* RicettaCardView.swift */,
 				9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */,
+				9FE294ED2925008C002BA287 /* Add-Ricetta */,
 			);
 			path = Ricetta;
 			sourceTree = "<group>";
@@ -297,6 +319,7 @@
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
 				9FE18D8529107F14007E2121 /* CreditView.swift in Sources */,
 				9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */,
+				9FE294EF292500B4002BA287 /* AddRicettaView.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,
 				9F30907328FEB4150027F12B /* CercaView.swift in Sources */,
 				9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */,
@@ -313,6 +336,7 @@
 				9F30907528FEB42D0027F12B /* ListaSpesaView.swift in Sources */,
 				9F30907728FEE0910027F12B /* CustomTabBarItems.swift in Sources */,
 				9FEAF423291A65EF00102EAC /* Ricetta.swift in Sources */,
+				9FE294F22925024E002BA287 /* Fase1AddRicettaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

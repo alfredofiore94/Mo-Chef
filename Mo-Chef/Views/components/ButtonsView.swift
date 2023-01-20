@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct ButtonsView: View {
+    
+    @State var icona: String
+    @State var coloreIcona: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            
+        }, label:{
+            Image(icona)
+                .renderingMode(.template)
+                .foregroundColor(coloreIcona)
+        })
     }
 }
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonsView()
+        ButtonsView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
     }
 }

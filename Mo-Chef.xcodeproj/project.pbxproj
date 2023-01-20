@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F26475F2978442B0074F49E /* CampoInserimentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26475E2978442B0074F49E /* CampoInserimentoView.swift */; };
+		9F26476229784F7D0074F49E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26476129784F7D0074F49E /* Utils.swift */; };
 		9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */; };
 		9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906128FE9BE10027F12B /* CustomTabBar.swift */; };
 		9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */; };
@@ -25,6 +27,8 @@
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
 		9F81789028FE9472002296BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788F28FE9472002296BC /* Preview Assets.xcassets */; };
+		9FC08E30297AA9580076F63E /* BoxIngredientiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */; };
+		9FC08E32297AEA740076F63E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC08E31297AEA740076F63E /* ButtonsView.swift */; };
 		9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */; };
 		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
 		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
@@ -37,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F26475E2978442B0074F49E /* CampoInserimentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampoInserimentoView.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		9F26476129784F7D0074F49E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		9F30906128FE9BE10027F12B /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		9F30906228FE9BE10027F12B /* CustomTabBarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainer.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		9F81788B28FE9472002296BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F81788D28FE9472002296BC /* Mo_Chef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mo_Chef.entitlements; sourceTree = "<group>"; };
 		9F81788F28FE9472002296BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxIngredientiView.swift; sourceTree = "<group>"; };
+		9FC08E31297AEA740076F63E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F26476029784F6F0074F49E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F26476129784F7D0074F49E /* Utils.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9F30905828FE9AC70027F12B /* menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +129,7 @@
 		9F30906728FEB2E30027F12B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FC08E2E297A9B400076F63E /* components */,
 				9F81788728FE9471002296BC /* Mo_ChefApp.swift */,
 				9F81788928FE9471002296BC /* ContentView.swift */,
 				9FEAF426291A726900102EAC /* Ricetta */,
@@ -190,6 +207,7 @@
 		9F81788628FE9471002296BC /* Mo-Chef */ = {
 			isa = PBXGroup;
 			children = (
+				9F26476029784F6F0074F49E /* Controller */,
 				9FEAF421291A65CC00102EAC /* Model */,
 				9F30906728FEB2E30027F12B /* Views */,
 				9F81788B28FE9472002296BC /* Assets.xcassets */,
@@ -205,6 +223,16 @@
 				9F81788F28FE9472002296BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FC08E2E297A9B400076F63E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				9F26475E2978442B0074F49E /* CampoInserimentoView.swift */,
+				9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */,
+				9FC08E31297AEA740076F63E /* ButtonsView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		9FE294ED2925008C002BA287 /* Add-Ricetta */ = {
@@ -317,7 +345,9 @@
 				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
+				9F26475F2978442B0074F49E /* CampoInserimentoView.swift in Sources */,
 				9FE18D8529107F14007E2121 /* CreditView.swift in Sources */,
+				9FC08E32297AEA740076F63E /* ButtonsView.swift in Sources */,
 				9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */,
 				9FE294EF292500B4002BA287 /* AddRicettaView.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,
@@ -327,6 +357,8 @@
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
+				9F26476229784F7D0074F49E /* Utils.swift in Sources */,
+				9FC08E30297AA9580076F63E /* BoxIngredientiView.swift in Sources */,
 				9FEAF428291A740300102EAC /* DettaglioRicettaView.swift in Sources */,
 				9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */,
 				9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */,
@@ -475,7 +507,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -513,7 +545,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;

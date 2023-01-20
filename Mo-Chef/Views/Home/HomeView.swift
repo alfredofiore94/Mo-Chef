@@ -50,7 +50,7 @@ struct HomeView: View {
         }
         // Add view redirect
         if createRicetta {
-            Text("add view").transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .trailing)))
+            AddRicettaView().transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .trailing)))
         }
     }
 }

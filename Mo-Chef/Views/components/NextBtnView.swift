@@ -7,24 +7,31 @@
 
 import SwiftUI
 
-struct ButtonsView: View {
+struct NextBtnView: View {
     
     @State var icona: String
     @State var coloreIcona: Color
+    //@State var azione: Void = {}()
     
     var body: some View {
-        Button(action: {
-            
-        }, label:{
+        //Button(action: {}, label:{
             Image(icona)
                 .renderingMode(.template)
                 .foregroundColor(coloreIcona)
-        })
+        //})
     }
 }
 
-struct ButtonsView_Previews: PreviewProvider {
+struct NextBtnView_Previews: PreviewProvider {
+    
+    func setValuePippo (pippo: inout Bool) -> Void{
+        
+        pippo = !pippo
+        return
+    }
+    
     static var previews: some View {
-        ButtonsView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
+        
+        NextBtnView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
     }
 }

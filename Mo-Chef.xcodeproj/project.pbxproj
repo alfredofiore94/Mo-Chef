@@ -23,12 +23,13 @@
 		9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */; };
 		9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */; };
 		9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */; };
+		9F47BCE1297EC3FF0040C02A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BCE0297EC3FF0040C02A /* DataManager.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
 		9F81788A28FE9471002296BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788928FE9471002296BC /* ContentView.swift */; };
 		9F81788C28FE9472002296BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788B28FE9472002296BC /* Assets.xcassets */; };
 		9F81789028FE9472002296BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F81788F28FE9472002296BC /* Preview Assets.xcassets */; };
 		9FC08E30297AA9580076F63E /* BoxIngredientiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */; };
-		9FC08E32297AEA740076F63E /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC08E31297AEA740076F63E /* ButtonsView.swift */; };
+		9FC08E32297AEA740076F63E /* NextBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC08E31297AEA740076F63E /* NextBtnView.swift */; };
 		9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */; };
 		9FCAC2E529004EBA00CFA084 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCAC2E429004EBA00CFA084 /* MenuView.swift */; };
 		9FE18D8529107F14007E2121 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18D8429107F14007E2121 /* CreditView.swift */; };
@@ -57,6 +58,7 @@
 		9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
 		9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
+		9F47BCE0297EC3FF0040C02A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F81788728FE9471002296BC /* Mo_ChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mo_ChefApp.swift; sourceTree = "<group>"; };
 		9F81788928FE9471002296BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		9F81788D28FE9472002296BC /* Mo_Chef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mo_Chef.entitlements; sourceTree = "<group>"; };
 		9F81788F28FE9472002296BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxIngredientiView.swift; sourceTree = "<group>"; };
-		9FC08E31297AEA740076F63E /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		9FC08E31297AEA740076F63E /* NextBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBtnView.swift; sourceTree = "<group>"; };
 		9FCAC2E229002EFA00CFA084 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9FCAC2E429004EBA00CFA084 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9FE18D8429107F14007E2121 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
@@ -129,9 +131,9 @@
 		9F30906728FEB2E30027F12B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9FC08E2E297A9B400076F63E /* components */,
 				9F81788728FE9471002296BC /* Mo_ChefApp.swift */,
 				9F81788928FE9471002296BC /* ContentView.swift */,
+				9FC08E2E297A9B400076F63E /* components */,
 				9FEAF426291A726900102EAC /* Ricetta */,
 				9F30905828FE9AC70027F12B /* menu */,
 				9F30906828FEB3070027F12B /* Bilancia */,
@@ -230,7 +232,7 @@
 			children = (
 				9F26475E2978442B0074F49E /* CampoInserimentoView.swift */,
 				9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */,
-				9FC08E31297AEA740076F63E /* ButtonsView.swift */,
+				9FC08E31297AEA740076F63E /* NextBtnView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -255,6 +257,7 @@
 		9FEAF421291A65CC00102EAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F47BCE0297EC3FF0040C02A /* DataManager.swift */,
 				9FEAF422291A65EF00102EAC /* Ricetta.swift */,
 			);
 			path = Model;
@@ -341,13 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F81788A28FE9471002296BC /* ContentView.swift in Sources */,
+				9F47BCE1297EC3FF0040C02A /* DataManager.swift in Sources */,
 				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
 				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
 				9F26475F2978442B0074F49E /* CampoInserimentoView.swift in Sources */,
 				9FE18D8529107F14007E2121 /* CreditView.swift in Sources */,
-				9FC08E32297AEA740076F63E /* ButtonsView.swift in Sources */,
+				9FC08E32297AEA740076F63E /* NextBtnView.swift in Sources */,
 				9FCAC2E329002EFA00CFA084 /* CustomButtons.swift in Sources */,
 				9FE294EF292500B4002BA287 /* AddRicettaView.swift in Sources */,
 				9F30907128FEB3FB0027F12B /* CategorieView.swift in Sources */,

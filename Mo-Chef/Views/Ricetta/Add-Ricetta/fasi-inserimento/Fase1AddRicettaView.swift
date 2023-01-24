@@ -9,42 +9,53 @@ import SwiftUI
 
 struct Fase1AddRicettaView: View {
     
-    @State var ricetta: Ricetta
+    @State var ricetta: Ricetta = Ricetta(nomePiatto: "Nuova Ricetta", tipopiatto: "", difficolta: "", tempoPrep: "", costo: "", numeroPersone: 0, listaIngredinti: [], listastep: [], presentazione: "")
     
     var body: some View {
-        ZStack{
-            Color.white
+        CustomNavView(){
             VStack{
-                titolo
-                Spacer()
+                strutturaFase
+                CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
+                    .customNavigationTitolo(Text("ora siam qua"))
+                              
+                ){
+                    NextBtnView(icona: "right_arrow", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                        .padding(.top)
+                    
+                }
+                .customNavigationTitolo(
+                    Text(ricetta.nomePiatto))
+                .customNavigationShowBackButton(false)
+                .customNavigationColoreTitolo(.white)
+                .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                
+                
             }
+            
         }
     }
-    
-    var titolo: some View {
-        
-       
-        VStack{
-            Text("TITOLO RICETTA")
+}
 
-            TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $ricetta.nomePiatto)
-            /*
-            RoundedRectangle(cornerRadius: 15)
-                
-                .stroke(Mo_ChefApp.verdeScuro, lineWidth: 5)
-                .background(RoundedRectangle(cornerRadius: 15).fill(Color.white))
-                .frame(height: 100)
-
-                .padding(80)
-                .foregroundColor(Mo_ChefApp.verdeScuro)
-                .font(.custom("SF Pro Text", size: 15))
-             */
-        }.padding(.top)
+extension Fase1AddRicettaView {
+    var strutturaFase: some View {
+        ScrollView{
+           
+            CampoInserimentoView(valore: "", titoloCampo: "TITOLO RICETTA", limitChar: 20, placeholder: "inserire il titolo")
+                .padding(.vertical)
+            AreaInserimentoView(valore: "", titoloCampo: "PRESENTAZIONE", limitChar: 50, placeholder: "inserire una piccola descrizione del piatto")
+                .padding(.vertical)
+            BoxIngredientiView(titolo: "INGREDIENTI", listaIngredienti: ricetta.listaIngredienti)
+            
+        }
     }
 }
 
 struct Fase1AddRicettaView_Previews: PreviewProvider {
+    
+    
+    
     static var previews: some View {
-        Fase1AddRicettaView(ricetta: DataTest.getDataTest()[0])
+    
+        Fase1AddRicettaView()
     }
 }

@@ -62,11 +62,56 @@ struct AreaInserimentoView: View {
     }
 }
 
+struct PickerInserimentoView: View {
+    
+    @State var valoreSelezionato: String
+    @State var titoloCampo: String
+    @State var placeholder: String
+    @State var pickerDataset: [String]
+    var body: some View {
+        VStack{
+            Text(titoloCampo)
+                .font(.system(size: 25, weight: .bold))
+                .foregroundColor(Mo_ChefApp.verdeScuro)
+            ZStack{
+                
+                RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 2.0)
+                )
+                .frame(height: 42)
+                .padding(.horizontal, 42)
+                
+                Menu{
+                    Picker("Seleziona", selection: $valoreSelezionato) {
+                        ForEach(pickerDataset, id: \.self) { val in
+                            Text(val).tag(val)
+                        }
+                    }
+                } label: {
+                    HStack{
+                        Spacer()
+                        Text(valoreSelezionato)
+                            .frame(height: 42)
+                        Spacer()
+                            
+                    }
+                    .font(.headline)
+                    .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                    .padding(.horizontal, 42)
+                }
+            }
+        }
+    }
+}
+
 struct CampoInserimentoView_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
             CampoInserimentoView(valore: "",titoloCampo: "nome",limitChar: 5, placeholder: "Inserire campo")
             AreaInserimentoView(valore: "",titoloCampo: "nome",limitChar: 200, placeholder: "Inserire campo")
+            
+            PickerInserimentoView(valoreSelezionato: "Seleziona", titoloCampo: "picker", placeholder: "seelziona", pickerDataset: PickerData.tipologiePietanze)
+             
+            
         }
     }
 }

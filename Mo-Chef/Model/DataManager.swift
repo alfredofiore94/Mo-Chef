@@ -13,8 +13,7 @@ class ListaRicettaModel: ObservableObject {
     
     let DEV_MODE_ENABLED = true
     
-    init() {
-        getListaRicette()
+    private init() {
     }
 
     
@@ -33,6 +32,14 @@ class ListaRicettaModel: ObservableObject {
     func moveltem(from: IndexSet, to: Int) {
         items.move (fromOffsets: from, toOffset: to)
     }
+    // Singleton
+    static var LISTA_RICETTE = ListaRicettaModel()
+}
+
+class PickerData {
+    static var tipologiePietanze = ["ANTIPASTO","PRIMO", "SECONDO", "CONTORNO", "DOLCE"]
+    
+    static var tipologieCosti = ["Molto economico", "Economico", "Medio", "Costoso", "Molto costoso"]
 }
 
 

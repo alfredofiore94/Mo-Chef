@@ -250,13 +250,13 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		9FE294ED2925008C002BA287 /* Add-Ricetta */ = {
+		9FE294ED2925008C002BA287 /* Add_Edit-Ricetta */ = {
 			isa = PBXGroup;
 			children = (
 				9FE294EE292500B4002BA287 /* AddRicettaView.swift */,
 				9FE294F0292501DD002BA287 /* fasi-inserimento */,
 			);
-			path = "Add-Ricetta";
+			path = "Add_Edit-Ricetta";
 			sourceTree = "<group>";
 		};
 		9FE294F0292501DD002BA287 /* fasi-inserimento */ = {
@@ -282,7 +282,7 @@
 			children = (
 				9FEAF424291A69E000102EAC /* RicettaCardView.swift */,
 				9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */,
-				9FE294ED2925008C002BA287 /* Add-Ricetta */,
+				9FE294ED2925008C002BA287 /* Add_Edit-Ricetta */,
 			);
 			path = Ricetta;
 			sourceTree = "<group>";

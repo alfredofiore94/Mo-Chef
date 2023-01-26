@@ -12,23 +12,25 @@ struct Fase1AddRicettaView: View {
     @State var ricetta: Ricetta
     var body: some View {
         CustomNavView(){
-            VStack{
-                strutturaFase
-                CustomNavLink(destinazione:
-                    Fase2AddRicettaView(ricetta: ricetta)
-                    .customNavigationTitolo(Text(ricetta.nomePiatto))
-                    .customNavigationShowBackButton(true)
-                ){
-                    NextBtnView(icona: "right_arrow", coloreIcona: Mo_ChefApp.arancioneCosmo)
-                        .padding(.vertical)
+            ZStack{
+                Color.white
+                VStack{
+                    strutturaFase
+                    CustomNavLink(destinazione:
+                                    Fase2AddRicettaView(ricetta: ricetta)
+                        .customNavigationTitolo(Text(ricetta.nomePiatto))
+                        .customNavigationShowBackButton(true)
+                    ){
+                        NextBtnView(icona: "right_arrow", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                            .padding(.vertical)
+                    }
+                    .customNavigationTitolo(
+                        titoloPrincipale)
+                    .customNavigationShowBackButton(false)
+                    .customNavigationColoreTitolo(.white)
+                    .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
                 }
-                .customNavigationTitolo(
-                    titoloPrincipale)
-                .customNavigationShowBackButton(false)
-                .customNavigationColoreTitolo(.white)
-                .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
             }
-            
         }
     }
 }

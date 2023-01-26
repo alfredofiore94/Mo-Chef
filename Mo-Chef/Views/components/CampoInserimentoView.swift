@@ -121,7 +121,6 @@ struct AreaInserimentoView: View {
                }
                 .foregroundColor(Mo_ChefApp.arancioneCosmo)
                 .padding([.top, .leading, .trailing, .bottom])
-                .keyboardType(.numberPad)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5, reservesSpace: true)
                 //.frame(height: 150)

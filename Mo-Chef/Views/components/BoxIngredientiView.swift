@@ -19,7 +19,7 @@ struct BoxIngredientiView: View {
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             ZStack{
                 RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 5.0))
-                    .frame(minHeight: 300)
+                   // .frame(minHeight: 30)
                     .padding(.horizontal, 25)
                 VStack{
                     HStack{
@@ -28,10 +28,9 @@ struct BoxIngredientiView: View {
                         Text("ingredienti inseriti")
                     }.padding(.top)
                         .foregroundColor(Mo_ChefApp.verdeScuro)
-                    ScrollView{
+                    VStack{
                         listaIngr
                         Spacer()
-                            .frame(minHeight: 40)
                     }
                     .padding(.horizontal, 75)
                     .padding(.vertical)
@@ -67,18 +66,10 @@ extension BoxIngredientiView {
 struct BoxIngredientiView_Previews: PreviewProvider {
     static var previews: some View {
         var listaIngr: [Ingrediente] = [
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "pepe", quantita: 23.5, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "pepe", quantita: 23.5, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "pepe", quantita: 23.5, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "pepe", quantita: 23.5, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "pepe", quantita: 23.5, uMisura: "g", isSelezionato: false),
-            Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false)]
+            //Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
+            
+            //Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false)
+        ]
         VStack{
             Spacer()
                 .padding()

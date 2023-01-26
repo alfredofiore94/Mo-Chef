@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct CampoInserimentoView: View {
-    @State var valore: String
+    @Binding var valore: String
     @State var titoloCampo: String
     @State var limitChar: Int
     @State var placeholder: String
@@ -18,7 +18,13 @@ struct CampoInserimentoView: View {
             Text(titoloCampo)
                 .font(.system(size: 25, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
-            TextField(placeholder, text: $valore)
+            TextField("", text: $valore)
+                //uso di custom placeholder
+                .placeholder(when: valore.isEmpty) {
+                    Text(placeholder)
+                        .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                        .opacity(0.3)
+               }
                 .foregroundColor(Mo_ChefApp.arancioneCosmo)
                 .padding(.vertical, 10)
                 .keyboardType(.default)
@@ -29,12 +35,74 @@ struct CampoInserimentoView: View {
             
                 .frame(height: 42)
                 .padding(.horizontal, 42)
+                
+        }
+    }
+}
+
+struct CampoInserimentoNumericoView: View {
+    @Binding var valore: String
+    @State var titoloCampo: String
+    @State var limitChar: Int
+    @State var placeholder: String
+    var body: some View {
+        VStack{
+            Text(titoloCampo)
+                .font(.system(size: 25, weight: .bold))
+                .foregroundColor(Mo_ChefApp.verdeScuro)
+            TextField("", text: $valore)
+                //uso di custom placeholder
+                .placeholder(when: valore.isEmpty) {
+                    Text(placeholder)
+                        .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                        .opacity(0.3)
+               }
+                .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                .padding(.vertical, 10)
+                .keyboardType(.numbersAndPunctuation)
+                .multilineTextAlignment(.center)
+                .overlay(                        RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 2.0))
+                )
+                
+                .frame(height: 42)
+                .padding(.horizontal, 42)
+        }
+    }
+}
+
+struct CampoInserimentoPersoneView: View {
+    @Binding var valore: Int?
+    @State var titoloCampo: String
+    @State var min: Int = 1
+    @State var max: Int = 100
+    @State var placeholder: String
+    var body: some View {
+        VStack{
+            Text(titoloCampo)
+                .font(.system(size: 25, weight: .bold))
+                .foregroundColor(Mo_ChefApp.verdeScuro)
+            TextField("", value: $valore, format: .number)
+            //uso di custom placeholder
+                .placeholderNumeric(when: valore == nil ? true : false) {
+            Text(placeholder)
+                .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                .opacity(0.3)
+            }
+            .foregroundColor(Mo_ChefApp.arancioneCosmo)
+            .padding(.vertical, 10)
+            .keyboardType(.numberPad)
+            .multilineTextAlignment(.center)
+            .overlay(                        RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 2.0))
+            )
+            .onReceive(Just(valore)) { _ in Utils.limitPerson(pers: &valore, min: min, max: max)}
+            .frame(height: 42)
+            .padding(.horizontal, 42)
         }
     }
 }
 
 struct AreaInserimentoView: View {
-    @State var valore: String
+    @Binding var valore: String
     @State var titoloCampo: String
     @State var limitChar: Int
     @State var placeholder: String
@@ -44,10 +112,16 @@ struct AreaInserimentoView: View {
                 .font(.system(size: 25, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             
-            TextField(placeholder, text: $valore, axis: .vertical)
+            TextField("", text: $valore, axis: .vertical)
+                //uso di custom placeholder
+                .placeholder(when: valore.isEmpty, alignment: .leading) {
+                    Text(placeholder)
+                        .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                        .opacity(0.3)
+               }
                 .foregroundColor(Mo_ChefApp.arancioneCosmo)
                 .padding([.top, .leading, .trailing, .bottom])
-                .keyboardType(.default)
+                .keyboardType(.numberPad)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5, reservesSpace: true)
                 //.frame(height: 150)
@@ -64,9 +138,9 @@ struct AreaInserimentoView: View {
 
 struct PickerInserimentoView: View {
     
-    @State var valoreSelezionato: String
+    @Binding var valoreSelezionato: String
     @State var titoloCampo: String
-    @State var placeholder: String
+    @State var placeholder: String = "Seleziona"
     @State var pickerDataset: [String]
     var body: some View {
         VStack{
@@ -81,7 +155,9 @@ struct PickerInserimentoView: View {
                 .padding(.horizontal, 42)
                 
                 Menu{
-                    Picker("Seleziona", selection: $valoreSelezionato) {
+                    Picker(selection: $valoreSelezionato, label: Text("ciao")) {
+                        
+                        
                         ForEach(pickerDataset, id: \.self) { val in
                             Text(val).tag(val)
                         }
@@ -89,8 +165,14 @@ struct PickerInserimentoView: View {
                 } label: {
                     HStack{
                         Spacer()
-                        Text(valoreSelezionato)
-                            .frame(height: 42)
+                        if(valoreSelezionato == ""){
+                            Text(placeholder)
+                                .foregroundColor(Mo_ChefApp.arancioneCosmo)
+                                .opacity(0.3)
+                        } else {
+                            Text(valoreSelezionato)
+                                .frame(height: 42)
+                        }
                         Spacer()
                             
                     }
@@ -104,13 +186,23 @@ struct PickerInserimentoView: View {
 }
 
 struct CampoInserimentoView_Previews: PreviewProvider {
+    
+    @State static var nome = ""
+    @State static var nome2: Int? = nil
+    @State static var valore: String = ""
+    @State static var picker: String = ""
+
     static var previews: some View {
+        
+        
         VStack{
-            CampoInserimentoView(valore: "",titoloCampo: "nome",limitChar: 5, placeholder: "Inserire campo")
-            AreaInserimentoView(valore: "",titoloCampo: "nome",limitChar: 200, placeholder: "Inserire campo")
+            CampoInserimentoView(valore: $nome,titoloCampo: "nome",limitChar: 5, placeholder: "Inserire campo")
+            Text(nome)
+            CampoInserimentoNumericoView(valore: $nome,titoloCampo: "numerico",limitChar: 5, placeholder: "Inserire campo")
+            CampoInserimentoPersoneView(valore: $nome2,titoloCampo: "persone", placeholder: "Inserire campo")
+            AreaInserimentoView(valore: $nome,titoloCampo: "nome",limitChar: 200, placeholder: "Inserire campo")
             
-            PickerInserimentoView(valoreSelezionato: "Seleziona", titoloCampo: "picker", placeholder: "seelziona", pickerDataset: PickerData.tipologiePietanze)
-             
+            PickerInserimentoView(valoreSelezionato: $picker, titoloCampo: "picker", placeholder: "Selziona", pickerDataset: PickerData.tipologiePietanze)
             
         }
     }

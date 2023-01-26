@@ -9,27 +9,24 @@ import SwiftUI
 
 struct Fase1AddRicettaView: View {
     
-    @State var ricetta: Ricetta = Ricetta(nomePiatto: "Nuova Ricetta", tipopiatto: "", difficolta: "", tempoPrep: "", costo: "", numeroPersone: 0, listaIngredinti: [], listastep: [], presentazione: "")
-    
+    @State var ricetta: Ricetta
     var body: some View {
         CustomNavView(){
             VStack{
                 strutturaFase
-                CustomNavLink(destinazione: Text("me ne sono andato").foregroundColor(.red)
-                    .customNavigationTitolo(Text("ora siam qua"))
-                              
+                CustomNavLink(destinazione:
+                    Fase2AddRicettaView(ricetta: ricetta)
+                    .customNavigationTitolo(Text(ricetta.nomePiatto))
+                    .customNavigationShowBackButton(true)
                 ){
                     NextBtnView(icona: "right_arrow", coloreIcona: Mo_ChefApp.arancioneCosmo)
-                        .padding(.top)
-                    
+                        .padding(.vertical)
                 }
                 .customNavigationTitolo(
-                    Text(ricetta.nomePiatto))
+                    titoloPrincipale)
                 .customNavigationShowBackButton(false)
                 .customNavigationColoreTitolo(.white)
                 .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-                
-                
             }
             
         }
@@ -40,22 +37,30 @@ extension Fase1AddRicettaView {
     var strutturaFase: some View {
         ScrollView{
            
-            CampoInserimentoView(valore: "", titoloCampo: "TITOLO RICETTA", limitChar: 20, placeholder: "inserire il titolo")
+            CampoInserimentoView(valore: $ricetta.nomePiatto, titoloCampo: "TITOLO RICETTA", limitChar: 20, placeholder: "inserire il titolo")
                 .padding(.vertical)
-            AreaInserimentoView(valore: "", titoloCampo: "PRESENTAZIONE", limitChar: 50, placeholder: "inserire una piccola descrizione del piatto")
+            AreaInserimentoView(valore: $ricetta.presentazione, titoloCampo: "PRESENTAZIONE", limitChar: 50, placeholder: "inserire una piccola descrizione del piatto")
                 .padding(.vertical)
             BoxIngredientiView(titolo: "INGREDIENTI", listaIngredienti: ricetta.listaIngredienti)
             
         }
     }
+    
+    var titoloPrincipale: Text {
+        
+        if(ricetta.nomePiatto == ""){
+            return Text("Nuova Ricetta")
+        }
+        return Text(ricetta.nomePiatto)
+    }
 }
 
 struct Fase1AddRicettaView_Previews: PreviewProvider {
     
-    
+    @State static var ricetta: Ricetta = Ricetta(nomePiatto: "", tipopiatto: "", difficolta: "", tempoPrep: "", costo: "", numeroPersone: nil, listaIngredinti: [], listastep: [], presentazione: "")
     
     static var previews: some View {
     
-        Fase1AddRicettaView()
+        Fase1AddRicettaView(ricetta: ricetta)
     }
 }

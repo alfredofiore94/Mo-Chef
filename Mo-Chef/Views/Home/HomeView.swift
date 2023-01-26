@@ -59,6 +59,6 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         
         
-        return HomeView(ricetteList: DataTest.getDataTest())
+        return HomeView(ricetteList: ListaRicettaModel.LISTA_RICETTE.getListaRicette())
     }
 }

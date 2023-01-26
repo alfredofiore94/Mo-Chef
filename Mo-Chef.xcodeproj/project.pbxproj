@@ -23,6 +23,7 @@
 		9F30908028FEEEFB0027F12B /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907B28FEEEFB0027F12B /* CustomNavBarView.swift */; };
 		9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */; };
 		9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */; };
+		9F41FEC7298025740078A054 /* Fase2AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41FEC6298025740078A054 /* Fase2AddRicettaView.swift */; };
 		9F47BCE1297EC3FF0040C02A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BCE0297EC3FF0040C02A /* DataManager.swift */; };
 		9F6240482981779800B45187 /* TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6240472981779800B45187 /* TextFieldExt.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };

@@ -40,6 +40,8 @@ class PickerData {
     static var tipologiePietanze = ["ANTIPASTO","PRIMO", "SECONDO", "CONTORNO", "DOLCE"]
     
     static var tipologieCosti = ["Molto economico", "Economico", "Medio", "Costoso", "Molto costoso"]
+    
+    static var tipologieDifficolta = ["Molto facile", "Facile", "Medio", "Difficile", "Molto difficile"]
 }
 
 

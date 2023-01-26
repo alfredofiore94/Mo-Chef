@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F26475F2978442B0074F49E /* CampoInserimentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26475E2978442B0074F49E /* CampoInserimentoView.swift */; };
+		9F26475F2978442B0074F49E /* CampiInserimentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26475E2978442B0074F49E /* CampiInserimentoView.swift */; };
 		9F26476229784F7D0074F49E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26476129784F7D0074F49E /* Utils.swift */; };
 		9F30906328FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */; };
 		9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30906128FE9BE10027F12B /* CustomTabBar.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F26475E2978442B0074F49E /* CampoInserimentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampoInserimentoView.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		9F26475E2978442B0074F49E /* CampiInserimentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampiInserimentoView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		9F26476129784F7D0074F49E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9F30906028FE9BE10027F12B /* CustomTabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 		9F30906128FE9BE10027F12B /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		9FC08E2E297A9B400076F63E /* components */ = {
 			isa = PBXGroup;
 			children = (
-				9F26475E2978442B0074F49E /* CampoInserimentoView.swift */,
+				9F26475E2978442B0074F49E /* CampiInserimentoView.swift */,
 				9FC08E2F297AA9570076F63E /* BoxIngredientiView.swift */,
 				9FC08E31297AEA740076F63E /* NextBtnView.swift */,
 			);
@@ -363,7 +363,7 @@
 				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
-				9F26475F2978442B0074F49E /* CampoInserimentoView.swift in Sources */,
+				9F26475F2978442B0074F49E /* CampiInserimentoView.swift in Sources */,
 				9F6240482981779800B45187 /* TextFieldExt.swift in Sources */,
 				9FE18D8529107F14007E2121 /* CreditView.swift in Sources */,
 				9FC08E32297AEA740076F63E /* NextBtnView.swift in Sources */,

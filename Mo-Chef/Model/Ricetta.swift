@@ -15,12 +15,12 @@ struct Ricetta: Identifiable {
     var difficolta: String
     var tempoPrep: String
     var costo : String
-    var numeroPersone: Int
+    var numeroPersone: Int?
     var listaIngredienti: [Ingrediente]
     var listaStep: [StepProcedimento]
     var presentazione: String
     
-    init(nomePiatto: String, tipopiatto: String, difficolta: String, tempoPrep: String, costo: String, numeroPersone: Int, listaIngredinti: [Ingrediente], listastep: [StepProcedimento], presentazione: String){
+    init(nomePiatto: String = "", tipopiatto: String = "", difficolta: String = "", tempoPrep: String = "", costo: String = "", numeroPersone: Int? = nil, listaIngredinti: [Ingrediente] = [], listastep: [StepProcedimento] = [], presentazione: String = ""){
         self.nomePiatto = nomePiatto
         self.tipoPiatto = tipopiatto
         self.difficolta = difficolta

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Mo_ChefApp: App {
     
-    @StateObject var listaRicette: ListaRicettaModel = ListaRicettaModel()
+    @StateObject var listaRicette: ListaRicettaModel = ListaRicettaModel.LISTA_RICETTE
     
     static let arancioneCosmo: Color = Color(red: 239 / 255, green: 128 / 255, blue: 74 / 255)
     

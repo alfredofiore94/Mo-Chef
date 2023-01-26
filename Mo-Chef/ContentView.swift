@@ -23,7 +23,7 @@ struct ContentView: View {
                     .customTabBarItem(tab: .bilancia, tabSelect: $tabIniziale)
                 CategorieView(menuModel: menuModel)
                     .customTabBarItem(tab: .categorie, tabSelect: $tabIniziale)
-                HomeView(menuModel: menuModel, ricetteList: DataTest.getDataTest())
+                HomeView(menuModel: menuModel, ricetteList: ListaRicettaModel.LISTA_RICETTE.getListaRicette())
                     .customTabBarItem(tab: .home, tabSelect: $tabIniziale)
                 CercaView(menuModel: menuModel)
                     .customTabBarItem(tab: .cerca, tabSelect: $tabIniziale)

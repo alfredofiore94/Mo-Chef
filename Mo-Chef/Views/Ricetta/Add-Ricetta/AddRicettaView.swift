@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AddRicettaView: View {
+    
+    @State var ricetta: Ricetta = Ricetta()
     var body: some View {
         
-        Fase1AddRicettaView()
+        Fase1AddRicettaView(ricetta: ricetta)
         
     }
 }

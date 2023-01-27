@@ -11,6 +11,7 @@ struct BoxIngredientiView: View {
     
     @State var titolo: String
     @State var listaIngredienti: [Ingrediente]
+    @State var showAddEditIngr: Bool = false
     
     var body: some View {
         VStack{
@@ -34,8 +35,18 @@ struct BoxIngredientiView: View {
                     }
                     .padding(.horizontal, 75)
                     .padding(.vertical)
-                    NextBtnView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
-                        .padding(.bottom)
+                    ZStack{
+                        Button(action: {
+                            showAddEditIngr.toggle()
+                        }, label: {
+                            NextBtnView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
+                                .padding(.bottom)
+                        })
+                        .fullScreenCover(isPresented: $showAddEditIngr, content: {
+                            AddEditIngredienteView()
+                                
+                        })
+                    }
                 }
                 .foregroundColor(Mo_ChefApp.arancioneCosmo)
             }

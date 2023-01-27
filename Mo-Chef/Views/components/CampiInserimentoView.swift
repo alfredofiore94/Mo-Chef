@@ -13,10 +13,11 @@ struct CampoInserimentoView: View {
     @State var titoloCampo: String
     @State var limitChar: Int
     @State var placeholder: String
+    var fontTitleSize: CGFloat = 25
     var body: some View {
         VStack{
             Text(titoloCampo)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: fontTitleSize, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             TextField("", text: $valore)
                 //uso di custom placeholder
@@ -45,10 +46,11 @@ struct CampoInserimentoNumericoView: View {
     @State var titoloCampo: String
     @State var limitChar: Int
     @State var placeholder: String
+    var fontTitleSize: CGFloat = 25
     var body: some View {
         VStack{
             Text(titoloCampo)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: fontTitleSize, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             TextField("", text: $valore)
                 //uso di custom placeholder
@@ -76,10 +78,12 @@ struct CampoInserimentoPersoneView: View {
     @State var min: Int = 1
     @State var max: Int = 100
     @State var placeholder: String
+    var fontTitleSize: CGFloat = 25
+
     var body: some View {
         VStack{
             Text(titoloCampo)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: fontTitleSize, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             TextField("", value: $valore, format: .number)
             //uso di custom placeholder
@@ -106,10 +110,12 @@ struct AreaInserimentoView: View {
     @State var titoloCampo: String
     @State var limitChar: Int
     @State var placeholder: String
+    var fontTitleSize: CGFloat = 25
+
     var body: some View {
         VStack{
             Text(titoloCampo)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: fontTitleSize, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             
             TextField("", text: $valore, axis: .vertical)
@@ -141,10 +147,12 @@ struct PickerInserimentoView: View {
     @State var titoloCampo: String
     @State var placeholder: String = "Seleziona"
     @State var pickerDataset: [String]
+    var fontTitleSize: CGFloat = 25
+
     var body: some View {
         VStack{
             Text(titoloCampo)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: fontTitleSize, weight: .bold))
                 .foregroundColor(Mo_ChefApp.verdeScuro)
             ZStack{
                 

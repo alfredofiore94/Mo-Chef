@@ -34,14 +34,16 @@ class ListaRicettaModel: ObservableObject {
     }
     // Singleton
     static var LISTA_RICETTE = ListaRicettaModel()
-}
-
+    }
+    
 class PickerData {
     static var tipologiePietanze = ["ANTIPASTO","PRIMO", "SECONDO", "CONTORNO", "DOLCE"]
     
     static var tipologieCosti = ["Molto economico", "Economico", "Medio", "Costoso", "Molto costoso"]
     
     static var tipologieDifficolta = ["Molto facile", "Facile", "Medio", "Difficile", "Molto difficile"]
+    
+    static var tipologieUnitaMisura = ["gr", "Kg", "ml", "L", "pz"]
 }
 
 
@@ -49,10 +51,10 @@ struct DataTest {
     static func getDataTest() -> [Ricetta]{
         var ricettaLista: [Ricetta] = []
         
-        var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: 23.5, uMisura: "g", isSelezionato: false)]
+        var listaIngr: [Ingrediente] = [Ingrediente(nome: "zucchero", quantita: "23.5", uMisura: "g", isSelezionato: false)]
         let presentazione = "Piccolo testo di presentazione del piatto. Si può descrivere la storia del piatto o altre introduzioni, come ‘un piatto simbolo dell’Italia"
         let count = 1...10
-        for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: 23.5, uMisura: "g", isSelezionato: false))
+        for _ in count { listaIngr.append(Ingrediente(nome: "farina", quantita: "23.5", uMisura: "g", isSelezionato: false))
         }
         
         let listaStep: [StepProcedimento] = [

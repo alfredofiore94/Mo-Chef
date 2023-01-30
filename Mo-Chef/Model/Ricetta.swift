@@ -37,11 +37,11 @@ struct Ingrediente: Identifiable {
     
     let id: String = UUID().uuidString
     var nome: String
-    var quantita: Float
+    var quantita: String
     var uMisura: String
     var isSelezionato: Bool
     
-    init(nome: String, quantita: Float, uMisura: String, isSelezionato: Bool){
+    init(nome: String = "", quantita: String = "", uMisura: String = "", isSelezionato: Bool = false){
         self.nome = nome
         self.quantita = quantita
         self.uMisura = uMisura

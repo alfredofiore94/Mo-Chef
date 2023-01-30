@@ -19,15 +19,16 @@ struct NextBtnView: View {
     }
 }
 
-struct DeleteBtnView: View {
+struct TextBtnView: View {
     
     @State var label: String
     @State var coloreIcona: Color
+    @State var width: CGFloat = 20
     
     var body: some View {
         Text(label)
             .padding(.vertical, 8)
-            .padding(.horizontal, 20)
+            .padding(.horizontal, width)
             .frame(height: 42)
             .background(coloreIcona)
             .foregroundColor(.white)
@@ -66,8 +67,9 @@ struct NextBtnView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        
-        NextBtnView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
-        DeleteBtnView(label: "Elimina", coloreIcona: Mo_ChefApp.arancioneCosmo)
+        VStack{
+            NextBtnView(icona: "plus-40", coloreIcona: Mo_ChefApp.arancioneCosmo)
+            TextBtnView(label: "Elimina", coloreIcona: Mo_ChefApp.arancioneCosmo)
+        }
     }
 }

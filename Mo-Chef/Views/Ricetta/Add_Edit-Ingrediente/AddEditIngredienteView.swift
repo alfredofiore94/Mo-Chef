@@ -12,6 +12,7 @@ struct AddEditIngredienteView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var ingrediente: Ingrediente = Ingrediente()
+    var isEditMode: Bool = false
     
     var body: some View {
         ZStack{
@@ -27,13 +28,9 @@ struct AddEditIngredienteView: View {
                     HStack{
                         Spacer()
                         Button(action: {presentationMode.wrappedValue.dismiss()
-                            
                         },
-                               label: {CloseButton()}
-                            )
-                        
-                            
-                            
+                            label: {CloseButton()}
+                        )
                     }
                     Spacer()
                     CampoInserimentoView(valore: $ingrediente.nome, titoloCampo: "nome", limitChar: 20, placeholder: "inserire tempo preparazione", fontTitleSize: 20)
@@ -48,12 +45,21 @@ struct AddEditIngredienteView: View {
                             .multilineTextAlignment(.center)
                             .padding(.leading, -30)
                     }
+                    if (isEditMode){
+                        Button(action: {
+                            
+                        }, label: {
+                            TextBtnView(label: "Elimina", coloreIcona: Mo_ChefApp.arancioneCosmo, width: 40)
+                        })
+                            .padding(.bottom)
+                    }
                     Button(action: {
 
                     }, label: {
                         NextBtnView(icona: "circle_check_solid_60", coloreIcona: Mo_ChefApp.arancioneCosmo)
                             .padding(.bottom)
                     })
+                    
                     
                 }
             }

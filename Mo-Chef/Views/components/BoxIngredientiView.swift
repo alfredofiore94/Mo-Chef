@@ -43,7 +43,7 @@ struct BoxIngredientiView: View {
                                 .padding(.bottom)
                         })
                         .fullScreenCover(isPresented: $showAddEditIngr, content: {
-                            AddEditIngredienteView()
+                            AddEditIngredienteView( isEditMode: true)
                                 
                         })
                     }
@@ -57,19 +57,20 @@ struct BoxIngredientiView: View {
 extension BoxIngredientiView {
     
     var listaIngr: some View {
-        ForEach(listaIngredienti) { ingrediente in
-            HStack{
-                Text(ingrediente.nome)
-                Spacer()
-                Text(String(ingrediente.quantita) + "")
-                Text(ingrediente.uMisura)
+        ScrollView{
+            List{
+                ForEach(listaIngredienti) { ingrediente in
+                    Text(ingrediente.nome)
+                    Spacer()
+                    Text(String(ingrediente.quantita) + "")
+                    Text(ingrediente.uMisura)
+                        .padding(.trailing)
+                }
+                .padding(.vertical, 5)
+                Divider()
                     .padding(.trailing)
             }
-            .padding(.vertical, 5)
-            Divider()
-                .padding(.trailing)
         }
-            
         
     }
 }
@@ -77,9 +78,9 @@ extension BoxIngredientiView {
 struct BoxIngredientiView_Previews: PreviewProvider {
     static var previews: some View {
         var listaIngr: [Ingrediente] = [
-            //Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false),
+            Ingrediente(nome: "bresaula", quantita: "2.50", uMisura: "g", isSelezionato: false),
             
-            //Ingrediente(nome: "bresaula", quantita: 2.50, uMisura: "g", isSelezionato: false)
+            Ingrediente(nome: "bresaula", quantita: "2.50", uMisura: "g", isSelezionato: false)
         ]
         VStack{
             Spacer()

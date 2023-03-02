@@ -12,6 +12,8 @@ struct AddEditIngredienteView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var ingrediente: Ingrediente = Ingrediente()
+    @State var showDeleteMex: Bool = false
+    
     var isEditMode: Bool = false
     
     var body: some View {
@@ -22,12 +24,13 @@ struct AddEditIngredienteView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 5.0))
                     
-                    .background()
+                    .background(.white)
                     .cornerRadius(8) // Inner corner radius
                 VStack{
                     HStack{
                         Spacer()
-                        Button(action: {presentationMode.wrappedValue.dismiss()
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
                         },
                             label: {CloseButton()}
                         )
@@ -45,13 +48,18 @@ struct AddEditIngredienteView: View {
                             .multilineTextAlignment(.center)
                             .padding(.leading, -30)
                     }
+                    // button Elimina
                     if (isEditMode){
                         Button(action: {
-                            
+                            showDeleteMex.toggle()
                         }, label: {
                             TextBtnView(label: "Elimina", coloreIcona: Mo_ChefApp.arancioneCosmo, width: 40)
                         })
-                            .padding(.bottom)
+                        .padding(.bottom)
+                        .fullScreenCover(isPresented:  $showDeleteMex, content: {
+                            DeleteIngredienteView(ingrediente: ingrediente, mex: "Elimina ingrediente ?", modaleAddEdit: presentationMode)
+                                
+                        })
                     }
                     Button(action: {
 
@@ -59,13 +67,10 @@ struct AddEditIngredienteView: View {
                         NextBtnView(icona: "circle_check_solid_60", coloreIcona: Mo_ChefApp.arancioneCosmo)
                             .padding(.bottom)
                     })
-                    
-                    
                 }
             }
             .frame(height: 400)
             .padding(.horizontal, 25)
-
         }
     }  
 
@@ -73,6 +78,6 @@ struct AddEditIngredienteView: View {
 
 struct AddEditIngredienteView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEditIngredienteView(ingrediente: DataTest.getDataTest()[0].listaIngredienti[0])
+        AddEditIngredienteView(ingrediente: DataTest.getDataTest()[0].listaIngredienti[0], isEditMode: true)
     }
 }

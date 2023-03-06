@@ -128,14 +128,14 @@ struct AreaInserimentoView: View {
                 .foregroundColor(Mo_ChefApp.arancioneCosmo)
                 .padding([.top, .leading, .trailing, .bottom])
                 .multilineTextAlignment(.leading)
-                .lineLimit(5, reservesSpace: true)
-                //.frame(height: 150)
+                .lineLimit(11, reservesSpace: true)
+                .frame(height: 250)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8.0).strokeBorder(Mo_ChefApp.verdeScuro, style: StrokeStyle(lineWidth: 2.0))
                         
                 )
                 .onReceive(Just(valore)) { _ in Utils.limitText(name: &valore, limitChar) }
-                .frame(height: 142)
+                //.frame(height: 242)
                 .padding(.horizontal, 25)
         }
     }

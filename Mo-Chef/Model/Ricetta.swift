@@ -33,7 +33,7 @@ struct Ricetta: Identifiable {
     }
 }
 
-struct Ingrediente: Identifiable {
+struct Ingrediente: Identifiable, Equatable, Hashable {
     
     let id: String = UUID().uuidString
     var nome: String

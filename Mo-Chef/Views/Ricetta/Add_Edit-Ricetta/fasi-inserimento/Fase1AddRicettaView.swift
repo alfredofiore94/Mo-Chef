@@ -37,13 +37,13 @@ struct Fase1AddRicettaView: View {
 
 extension Fase1AddRicettaView {
     var strutturaFase: some View {
-        ScrollView{
-           
+        VStack{
+            Spacer()
             CampoInserimentoView(valore: $ricetta.nomePiatto, titoloCampo: "TITOLO RICETTA", limitChar: 20, placeholder: "inserire il titolo")
                 .padding(.vertical)
-            AreaInserimentoView(valore: $ricetta.presentazione, titoloCampo: "PRESENTAZIONE", limitChar: 50, placeholder: "inserire una piccola descrizione del piatto")
+            AreaInserimentoView(valore: $ricetta.presentazione, titoloCampo: "PRESENTAZIONE", limitChar: 150, placeholder: "inserire una piccola descrizione del piatto")
                 .padding(.vertical)
-            BoxIngredientiView(titolo: "INGREDIENTI", listaIngredienti: ricetta.listaIngredienti)
+            Spacer()
             
         }
     }

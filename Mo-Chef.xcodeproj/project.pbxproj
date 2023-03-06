@@ -24,7 +24,7 @@
 		9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */; };
 		9F30908228FEEEFB0027F12B /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */; };
 		9F3A2E682982DC0A00076010 /* AddEditIngredienteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A2E672982DC0A00076010 /* AddEditIngredienteView.swift */; };
-		9F41FEC7298025740078A054 /* Fase2AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41FEC6298025740078A054 /* Fase2AddRicettaView.swift */; };
+		9F41FEC7298025740078A054 /* Fase3AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41FEC6298025740078A054 /* Fase3AddRicettaView.swift */; };
 		9F47BCE1297EC3FF0040C02A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47BCE0297EC3FF0040C02A /* DataManager.swift */; };
 		9F6240482981779800B45187 /* TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6240472981779800B45187 /* TextFieldExt.swift */; };
 		9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81788728FE9471002296BC /* Mo_ChefApp.swift */; };
@@ -45,6 +45,7 @@
 		9FEAF423291A65EF00102EAC /* Ricetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF422291A65EF00102EAC /* Ricetta.swift */; };
 		9FEAF425291A69E000102EAC /* RicettaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF424291A69E000102EAC /* RicettaCardView.swift */; };
 		9FEAF428291A740300102EAC /* DettaglioRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */; };
+		9FEBA54F29B0EE3B00B3E459 /* Fase2AddRicettaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA54E29B0EE3B00B3E459 /* Fase2AddRicettaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +66,7 @@
 		9F30907C28FEEEFB0027F12B /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		9F30907D28FEEEFB0027F12B /* CustomNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		9F3A2E672982DC0A00076010 /* AddEditIngredienteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditIngredienteView.swift; sourceTree = "<group>"; };
-		9F41FEC6298025740078A054 /* Fase2AddRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fase2AddRicettaView.swift; sourceTree = "<group>"; };
+		9F41FEC6298025740078A054 /* Fase3AddRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fase3AddRicettaView.swift; sourceTree = "<group>"; };
 		9F47BCE0297EC3FF0040C02A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9F6240472981779800B45187 /* TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExt.swift; sourceTree = "<group>"; };
 		9F81788428FE9471002296BC /* Mo-Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mo-Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +89,7 @@
 		9FEAF422291A65EF00102EAC /* Ricetta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ricetta.swift; sourceTree = "<group>"; };
 		9FEAF424291A69E000102EAC /* RicettaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicettaCardView.swift; sourceTree = "<group>"; };
 		9FEAF427291A740300102EAC /* DettaglioRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioRicettaView.swift; sourceTree = "<group>"; };
+		9FEBA54E29B0EE3B00B3E459 /* Fase2AddRicettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fase2AddRicettaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				9FE294F12925024E002BA287 /* Fase1AddRicettaView.swift */,
-				9F41FEC6298025740078A054 /* Fase2AddRicettaView.swift */,
+				9FEBA54E29B0EE3B00B3E459 /* Fase2AddRicettaView.swift */,
+				9F41FEC6298025740078A054 /* Fase3AddRicettaView.swift */,
 			);
 			path = "fasi-inserimento";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				9F30906428FE9BE10027F12B /* CustomTabBar.swift in Sources */,
 				9F30907E28FEEEFB0027F12B /* CustomNavBarPreferenceKeys.swift in Sources */,
 				9F30906528FE9BE10027F12B /* CustomTabBarContainer.swift in Sources */,
+				9FEBA54F29B0EE3B00B3E459 /* Fase2AddRicettaView.swift in Sources */,
 				9F30906D28FEB3C80027F12B /* HomeView.swift in Sources */,
 				9F26475F2978442B0074F49E /* CampiInserimentoView.swift in Sources */,
 				9F6240482981779800B45187 /* TextFieldExt.swift in Sources */,
@@ -396,7 +400,7 @@
 				9F30906F28FEB3D90027F12B /* BilanciaView.swift in Sources */,
 				9F81788828FE9471002296BC /* Mo_ChefApp.swift in Sources */,
 				9F30907F28FEEEFB0027F12B /* CustomNavView.swift in Sources */,
-				9F41FEC7298025740078A054 /* Fase2AddRicettaView.swift in Sources */,
+				9F41FEC7298025740078A054 /* Fase3AddRicettaView.swift in Sources */,
 				9F30908128FEEEFB0027F12B /* CustomNavBarContainerView.swift in Sources */,
 				9F26476229784F7D0074F49E /* Utils.swift in Sources */,
 				9FC08E30297AA9580076F63E /* BoxIngredientiView.swift in Sources */,

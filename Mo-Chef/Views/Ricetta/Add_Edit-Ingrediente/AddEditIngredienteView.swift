@@ -12,7 +12,7 @@ struct AddEditIngredienteView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var ingrediente: Ingrediente = Ingrediente()
-    @State var showDeleteMex: Bool = false
+    //@State var showDeleteMex: Bool = false
     
     var isEditMode: Bool = false
     
@@ -48,6 +48,7 @@ struct AddEditIngredienteView: View {
                             .multilineTextAlignment(.center)
                             .padding(.leading, -30)
                     }
+                    /*
                     // button Elimina
                     if (isEditMode){
                         Button(action: {
@@ -60,7 +61,7 @@ struct AddEditIngredienteView: View {
                             DeleteIngredienteView(ingrediente: ingrediente, mex: "Elimina ingrediente ?", modaleAddEdit: presentationMode)
                                 
                         })
-                    }
+                    }*/
                     Button(action: {
 
                     }, label: {

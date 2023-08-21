@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MenuView: View {
     
-    @ObservedObject var menuModel: MenuModel
-    @ObservedObject var editModel: EditModel
+    //@ObservedObject var menuModel: MenuModel
+   // @ObservedObject var editModel: EditModel
 
     var body: some View {
-        CustomNavView(){
+       // CustomNavView(){
             ZStack{
                 Color.white.ignoresSafeArea()
                 ScrollView{
@@ -29,7 +29,9 @@ struct MenuView: View {
                         }
                         
                         CustomNavLink(destinazione: CreditView()
-                            .customNavigationTitolo(Text("Credits"))
+                            .customNavigationTitolo(Text("Menù").foregroundColor(.white)
+                                .font(.system(size: 30))
+                            )
                             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
                             .customNavigationColoreTitolo(.white)
                         ){
@@ -37,14 +39,18 @@ struct MenuView: View {
                         }
                     }
                 }
-            }
+            /*}
             .customNavigationTitolo(Text("Menù").foregroundColor(.white)
                 .font(.system(size: 30))
             )
             .customNavigationShowBackButton(false)
             .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "close_img", coloreIcona: .white))
+            //.customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "close_img", coloreIcona: .white))
+             */
         }
+            .animation(.default)
+            .transition(.move(edge: .leading))
+            
 
     }
 }
@@ -71,9 +77,9 @@ extension MenuView {
 struct MenuView_Previews: PreviewProvider {
 
     static var previews: some View {
-        let menuModel =  MenuModel()
+        //let menuModel =  MenuModel()
         let editModel =  EditModel()
 
-        MenuView(menuModel: menuModel, editModel: editModel)
+        MenuView()
     }
 }

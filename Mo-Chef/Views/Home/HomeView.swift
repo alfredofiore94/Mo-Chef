@@ -17,31 +17,20 @@ struct HomeView: View {
     var body: some View {
         // Home main page
         if !createRicetta{
-            CustomNavView(){
-                ZStack{
-                    Color.white
-                    ScrollView{
-                        VStack{
-                            ForEach(ricetteList){ ricetta in
-                                CustomNavLink(destinazione: DettaglioRicettaView(ricetta: ricetta)
-                                    .customNavigationTitolo(Text(ricetta.nomePiatto).font(.system(size: 30, weight: .bold))
-                                                           )
-                                        .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
-                                        .customNavigationColoreTitolo(.white)
-                                        .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-                                ){
-                                    RicettaCardView(ricetta: ricetta)
-                                }
-                                .customNavigationTitolo(Text("MonChef")
-                                                        
-                                )
-                                .customNavigationShowBackButton(false)
-                                .customNavigationColoreTitolo(.white)
-                                .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-                                
-                                .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white)
-                                )
-                                .customNavigationAddButton(ButtonAdd(push: $createRicetta, icona: "plus-29", coloreIcona: .white))
+            
+            ZStack{
+                Color.white
+                ScrollView{
+                    VStack{
+                        ForEach(ricetteList){ ricetta in
+                            CustomNavLink(destinazione: DettaglioRicettaView(ricetta: ricetta)
+                                .customNavigationTitolo(Text(ricetta.nomePiatto).font(.system(size: 30, weight: .bold))
+                                                       )
+                                    .customNavigationEditButton(ButtonEdit(editModel: editModel, icona: "details_img", coloreIcona: .white))
+                                    .customNavigationColoreTitolo(.white)
+                                    .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                            ){
+                                RicettaCardView(ricetta: ricetta)
                             }
                         }
                     }

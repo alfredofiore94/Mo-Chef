@@ -12,7 +12,7 @@ struct CategorieView: View {
     @ObservedObject var editModel = EditModel()
 
     var body: some View {
-        CustomNavView(){
+        
             ZStack{
                 Color.white
                 VStack{
@@ -84,15 +84,7 @@ struct CategorieView: View {
                 }
 
             }
-            .customNavigationTitolo(Text("MonChef")
-                                    
-            )
-            .customNavigationShowBackButton(false)
-            .customNavigationColoreTitolo(.white)
-            .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
-            
-            .customNavigationMenuButton(ButtonMenu(menuModel: menuModel, icona: "menu_img", coloreIcona: .white))
-        }.foregroundColor(Mo_ChefApp.verdeScuro)
+            .foregroundColor(Mo_ChefApp.verdeScuro)
         
     }
 }

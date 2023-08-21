@@ -32,23 +32,45 @@ struct ButtonEdit: View, Equatable {
 }
 
 struct ButtonMenu: View, Equatable {
-    @ObservedObject var menuModel: MenuModel
-    let icona: String
-    let coloreIcona: Color
-
     static func == (lhs: ButtonMenu, rhs: ButtonMenu) -> Bool {
-        return lhs.menuModel.isOpenMenu == rhs.menuModel.isOpenMenu
+        return lhs.openCloseAct == rhs.openCloseAct
     }
     
+    //@ObservedObject var menuModel: MenuModel
+    let icona: String
+    let coloreIcona: Color
+    @Binding var openCloseAct: Bool
+
+    
+    
     var body: some View {
-        return 
-            Button(action: {
-                menuModel.openCloseMenu()
-            }, label:{
-                Image(icona)
-                    .renderingMode(.template)
-                    .foregroundColor(coloreIcona)
-            }) 
+       return
+        
+           // Button(action: {
+                CustomNavLink(destinazione: MenuView()
+                    .customNavigationTitolo(Text("Menù")
+                        .foregroundColor(.white)
+                        .font(.system(size: 30)
+                            
+                             )
+                            
+                    )
+                    .customNavigationColoreSfondo(Mo_ChefApp.arancioneCosmo)
+                    .customNavigationColoreTitolo(.white)
+                    //.transition(.move(edge: .leading))
+                    //.animation(.easeInOut)
+                    
+                ){
+                    Image(icona)
+                        .renderingMode(.template)
+                        .foregroundColor(coloreIcona)
+                }
+                
+           // }, label:{
+                
+          //  })
+        
+            
     }
 }
 

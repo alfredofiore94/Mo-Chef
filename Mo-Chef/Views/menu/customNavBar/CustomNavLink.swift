@@ -23,10 +23,13 @@ struct CustomNavLink<Label: View, Destination: View>: View {
             destination: CustomNavBarContainerView(contenuto: {
                 destinazione
             }) .navigationBarHidden(true)
+                
+                
             ,
             label: {
                 label
-            })
+            }) 
+       
     }
 }
 
